@@ -13,6 +13,8 @@ import {
 const {width, height} = Dimensions.get('window');
 console.log(height);
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {Translation_data} from '../components/Translation_cat';
+import {Urdu_data} from '../components/UrduTranslation';
 export default function Home({navigation}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -51,7 +53,7 @@ export default function Home({navigation}) {
           />
           <TouchableOpacity
             style={styles.row}
-            onPress={() => navigation.navigate('Details')}>
+            onPress={() => navigation.navigate('Component1')}>
             <Image
               style={styles.image}
               source={require('../../src/assets/books.png')}
@@ -64,8 +66,8 @@ export default function Home({navigation}) {
 
           <TouchableOpacity style={styles.row} onPress={toggleAccordion}>
             <Image
-              style={styles.image}
-              source={require('../../src/assets/open-book.png')}
+              style={styles.image2}
+              source={require('../../src/assets/img4.png')}
             />
             <View style={{marginLeft: 10}}>
               <Text style={styles.text}>Quran Translation</Text>
@@ -75,12 +77,11 @@ export default function Home({navigation}) {
 
           {isExpanded && (
             <>
-              <Component text="اردو" />
-              <Component text="پشتو" />
-              <Component text="हिन्दी" />
+              {Translation_data.map((item, index) => {
+                return <Component key={index} text={item.cat_name} />;
+              })}
             </>
           )}
-
           <View style={{height: 50}} />
         </ScrollView>
       </ImageBackground>
@@ -90,9 +91,10 @@ export default function Home({navigation}) {
 
 const Component = ({text}) => {
   const navigation = useNavigation();
+  const SurahList = Urdu_data.map(item => item.surah_data);
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('Translation', {text})}
+      onPress={() => navigation.navigate('Translation', {text, SurahList})}
       style={styles.row2}>
       <Icon name="folder" size={20} color="black" />
       <View style={{marginLeft: 20}}>
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   row: {
-    backgroundColor: 'rgba(149, 129, 69, 0.5)',
+    backgroundColor: 'rgba(149, 129, 89, 0.9)',
     padding: 10,
     flexDirection: 'row',
     gap: 10,
@@ -143,12 +145,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   image: {
-    width: 40,
+    width: 50,
     height: 40,
   },
   image2: {
-    width: 30,
-    height: 30,
+    width: 50,
+    height: 40,
   },
   container: {
     margin: 20,

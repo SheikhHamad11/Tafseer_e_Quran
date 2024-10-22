@@ -10,9 +10,10 @@ export default function CustomHeader({text}) {
     <>
       <View
         style={{
-          backgroundColor: 'rgba(149, 129, 69, 0.7)',
+          backgroundColor: 'rgba(149, 129, 89, 0.9)',
           height: 50,
           padding: 10,
+          paddingHorizontal: 20,
           alignItems: 'center',
           flexDirection: 'row',
           justifyContent: 'space-between',

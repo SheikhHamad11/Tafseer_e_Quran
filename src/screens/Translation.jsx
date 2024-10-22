@@ -5,6 +5,7 @@ import {
   Alert,
   ScrollView,
   TouchableOpacity,
+  FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
 import React, {useEffect, useState} from 'react';
@@ -13,6 +14,9 @@ import RNFS from 'react-native-fs';
 import CustomHeader from '../components/CustomHeader';
 import {surah} from '../components/SurahList';
 import {useNavigation} from '@react-navigation/native';
+import {Urdu_data} from '../components/UrduTranslation';
+const SurahName = Urdu_data.map(item => item);
+console.log('SurahName', SurahName);
 export default function Translation({route}) {
   const {text} = route.params;
   return (
@@ -22,11 +26,18 @@ export default function Translation({route}) {
         source={require('../../src/assets/quran.jpg')}
         style={{flex: 1, paddingHorizontal: 20}}
         resizeMode="cover">
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <FlatList
+          data={SurahName}
+          showsVerticalScrollIndicator={false}
+          renderItem={({item, index}) => (
+            <SurahComponent key={index} item={item} />
+          )}
+        />
+        {/* <ScrollView showsVerticalScrollIndicator={false}>
           {surah.map((item, index) => {
             return <SurahComponent key={index} item={item} />;
           })}
-        </ScrollView>
+        </ScrollView> */}
       </ImageBackground>
     </>
   );
@@ -34,6 +45,15 @@ export default function Translation({route}) {
 
 const SurahComponent = ({item}) => {
   const [downloading, setDownloading] = useState(false);
+  const data = item.surah_data;
+  console.log(data);
+  const volumeData = data.map((item, index) => {
+    return item.surah_name;
+  });
+  console.log('volumeData', volumeData);
+  const SurahName = volumeData.map(item => item);
+  console.log(SurahName);
+
   let sound;
   // Load the sound when the component mounts
   const getAudio = () => {
@@ -109,7 +129,7 @@ const SurahComponent = ({item}) => {
       });
   };
   const navigation = useNavigation();
-  const name = item.name;
+  const name = item.title;
   const url = item.url;
   return (
     <TouchableOpacity
@@ -133,8 +153,8 @@ const SurahComponent = ({item}) => {
         marginVertical: 10,
       }}>
       <View style={{flexDirection: 'row', gap: 10}}>
-        <Text style={{color: 'black', fontSize: 18}}>{item.number}.</Text>
-        <Text style={{color: 'black', fontSize: 18}}>{item.name}</Text>
+        <Text style={{color: 'black', fontSize: 18}}>{item.id}.</Text>
+        <Text style={{color: 'black', fontSize: 18}}>{SurahName}</Text>
       </View>
       <View style={{flexDirection: 'row', gap: 10}}>
         {/* <TouchableOpacity onPress={pauseAudio}>
@@ -151,58 +171,3 @@ const SurahComponent = ({item}) => {
     </TouchableOpacity>
   );
 };
-
-// // Check if permission is granted
-// const checkStoragePermission = async () => {
-//   if (Platform.OS === 'android') {
-//     try {
-//       const writeGranted = await PermissionsAndroid.check(
-//         PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-//       );
-//       const readGranted = await PermissionsAndroid.check(
-//         PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
-//       );
-
-//       if (writeGranted && readGranted) {
-//         console.log('Permissions already granted');
-//         return true;
-//       } else {
-//         console.log('Permissions not granted, requesting...');
-//         return requestStoragePermission();
-//       }
-//     } catch (err) {
-//       console.warn(err);
-//       return false;
-//     }
-//   }
-//   return true; // iOS doesn't require explicit permission request
-// };
-
-// // Request permission for Android
-// const requestStoragePermission = async () => {
-//   try {
-//     const granted = await PermissionsAndroid.requestMultiple([
-//       PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-//       PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
-//     ]);
-
-//     if (
-//       granted['android.permission.WRITE_EXTERNAL_STORAGE'] ===
-//         PermissionsAndroid.RESULTS.GRANTED &&
-//       granted['android.permission.READ_EXTERNAL_STORAGE'] ===
-//         PermissionsAndroid.RESULTS.GRANTED
-//     ) {
-//       console.log('Permissions granted');
-//       return true;
-//     } else {
-//       Alert.alert(
-//         'Permission Denied',
-//         'You need to grant storage permission to download the file.',
-//       );
-//       return false;
-//     }
-//   } catch (err) {
-//     console.warn(err);
-//     return false;
-//   }
-// };

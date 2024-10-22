@@ -2,11 +2,13 @@ import React, {useState} from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import Home from '../screens/Home';
 import About from '../screens/About';
-import Details from '../screens/Details';
+import Component1 from '../screens/Component1';
 import Contact from '../screens/Contact';
 import Translation from '../screens/Translation';
 import VolumePage from '../screens/VolumePage';
 import PlayAudio from '../screens/PlayAudio';
+import VolumePlay from '../screens/VolumePlay';
+
 export default function AppNavigator() {
   const Stack = createStackNavigator();
 
@@ -23,7 +25,8 @@ export default function AppNavigator() {
         <Stack.Screen name="Contact" component={Contact} />
         <Stack.Screen name="Translation" component={Translation} />
         <Stack.Screen name="VolumePage" component={VolumePage} />
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="Component1" component={Component1} />
+        <Stack.Screen name="VolumePlay" component={VolumePlay} />
       </Stack.Navigator>
     </>
   );
