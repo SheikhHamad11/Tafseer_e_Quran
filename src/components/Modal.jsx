@@ -21,50 +21,32 @@ const Header = ({modalVisible, setModalVisible}) => {
       animationType="fade"
       transparent={true}
       visible={modalVisible}
-      onRequestClose={closeModal}
-      style={styles.mainContainer}>
-      <TouchableOpacity
-        activeOpacity={1}
-        onPressOut={closeModal}
-        style={styles.overlay}>
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <View style={{marginVertical: 4}}>
-              <TouchableOpacity
-                className="items-center justify-center"
-                onPress={() =>
-                  Linking.openURL('https:www.quranurdu.com/tafa/')
-                }>
-                <Icon name="earth-americas" size={35} color="rgba(0,0,0,0.9)" />
-              </TouchableOpacity>
-            </View>
-            <View className="border border-gray-800 px-7"></View>
-            <View style={{marginVertical: 4}}>
-              <TouchableOpacity
-                className="items-center justify-center"
-                onPress={() => {
-                  setModalVisible(false);
-                  navigation.navigate('Contact');
-                }}>
-                <Icon name="envelope" size={35} color="rgba(0,0,0,0.9)" />
-              </TouchableOpacity>
-            </View>
-            <View className="border border-gray-800 px-7"></View>
-            <View style={{margin: 4}}>
-              <TouchableOpacity
-                className="items-center justify-center"
-                onPress={() => {
-                  setModalVisible(false);
-                  navigation.navigate('About');
-                }}>
-                <Icon name="file-alt" size={35} color="rgba(0,0,0,0.9)" />
+      onRequestClose={closeModal}>
+      <TouchableOpacity onPressOut={closeModal} style={styles.overlay}>
+        <View style={styles.modalContent}>
+          <TouchableOpacity
+            className="items-center justify-center"
+            onPress={() => Linking.openURL('https:www.quranurdu.com/tafa/')}>
+            <Icon name="earth-americas" size={35} color="rgba(0,0,0,0.9)" />
+          </TouchableOpacity>
 
-                {/* <Icon icon="fa-file-alt" size={35} color="#0274B3" /> */}
-              </TouchableOpacity>
-            </View>
+          <TouchableOpacity
+            className="items-center justify-center"
+            onPress={() => {
+              setModalVisible(false);
+              navigation.navigate('Contact');
+            }}>
+            <Icon name="envelope" size={35} color="rgba(0,0,0,0.9)" />
+          </TouchableOpacity>
 
-            {/* <Button title="Close Modal" onPress={closeModal} /> */}
-          </View>
+          <TouchableOpacity
+            className="items-center justify-center"
+            onPress={() => {
+              setModalVisible(false);
+              navigation.navigate('About');
+            }}>
+            <Icon name="file-alt" size={35} color="rgba(0,0,0,0.9)" />
+          </TouchableOpacity>
         </View>
       </TouchableOpacity>
     </Modal>
@@ -74,19 +56,12 @@ const Header = ({modalVisible, setModalVisible}) => {
 export default Header;
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    justifyContent: 'flex-start',
-    flex: 1,
-  },
-  modalContainer: {
+  overlay: {
     width: '100%',
     height: Dimensions.get('window').height,
-    // flex: 1,
     paddingTop: 60,
-    // paddingEnd: 10,
-    justifyContent: 'flex-start',
     alignItems: 'flex-end',
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
   },
   modalContent: {
     backgroundColor: 'rgba(149, 129, 69, 0.7)',
@@ -94,10 +69,7 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 10,
     alignItems: 'center',
-    // elevation: 5,
-  },
-  overlay: {
-    flex: 1,
-    backgroundColor: 'transparent',
+    gap: 8,
+    elevation: 10,
   },
 });

@@ -1,5 +1,5 @@
 import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -9,17 +9,65 @@ import {
   TouchableOpacity,
   ScrollView,
   Dimensions,
+  FlatList,
+  Alert,
 } from 'react-native';
 const {width, height} = Dimensions.get('window');
 console.log(height);
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Translation_data} from '../components/Translation_cat';
-import {Urdu_data} from '../components/UrduTranslation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 export default function Home({navigation}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleAccordion = () => {
     setIsExpanded(!isExpanded);
+  };
+
+  useEffect(() => {
+    checkForResumeData();
+  }, []);
+
+  const checkForResumeData = async () => {
+    try {
+      const savedPosition = await AsyncStorage.getItem('playbackPosition');
+      const savedSurahName = await AsyncStorage.getItem('surahName');
+      const savedSurahId = await AsyncStorage.getItem('surahId');
+      const savedSurahUrl = await AsyncStorage.getItem('surahUrl');
+      // console.log('get position', savedPosition, savedSurahName);
+
+      if (savedPosition && savedSurahName) {
+        Alert.alert(
+          'Resume Playback',
+          `Would you like to resume ${savedSurahName} from where you left off?`,
+          [
+            {
+              text: 'Yes',
+              onPress: () => {
+                navigation.navigate('VolumePlay', {
+                  item: {
+                    surah_id: savedSurahId, // assuming you have saved surah_id
+                    surah_name: savedSurahName,
+                    position: savedPosition,
+                    url: savedSurahUrl,
+                  },
+                });
+              },
+            },
+            {
+              text: 'No',
+              onPress: () => {
+                AsyncStorage.removeItem('playbackPosition');
+                AsyncStorage.removeItem('surahName');
+              },
+            },
+          ],
+        );
+      }
+    } catch (error) {
+      console.error('Error retrieving playback data:', error);
+    }
   };
   return (
     <>
@@ -53,7 +101,7 @@ export default function Home({navigation}) {
           />
           <TouchableOpacity
             style={styles.row}
-            onPress={() => navigation.navigate('Component1')}>
+            onPress={() => navigation.navigate('VolumeCat')}>
             <Image
               style={styles.image}
               source={require('../../src/assets/books.png')}
@@ -77,8 +125,16 @@ export default function Home({navigation}) {
 
           {isExpanded && (
             <>
+              {/* <FlatList
+                data={Translation_data}
+                renderItem={({item, index}) => (
+                  <Component key={index} text={item.cat_name} id={item.id} />
+                )}
+              /> */}
               {Translation_data.map((item, index) => {
-                return <Component key={index} text={item.cat_name} />;
+                return (
+                  <Component key={index} text={item.cat_name} id={item.id} />
+                );
               })}
             </>
           )}
@@ -89,12 +145,12 @@ export default function Home({navigation}) {
   );
 }
 
-const Component = ({text}) => {
+const Component = ({text, id}) => {
   const navigation = useNavigation();
-  const SurahList = Urdu_data.map(item => item.surah_data);
+
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('Translation', {text, SurahList})}
+      onPress={() => navigation.navigate('Translation', {text, id})}
       style={styles.row2}>
       <Icon name="folder" size={20} color="black" />
       <View style={{marginLeft: 20}}>

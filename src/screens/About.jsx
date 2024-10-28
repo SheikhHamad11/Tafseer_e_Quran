@@ -5,13 +5,20 @@ import CustomHeader from '../components/CustomHeader';
 export default function About() {
   return (
     <>
-      <CustomHeader text="Contact" />
+      <CustomHeader text="About" />
       <ImageBackground
         source={require('../../src/assets/quran.jpg')}
-        style={{flex: 1, padding: 20}}
+        style={{flex: 1, paddingHorizontal: 20}}
         resizeMode="cover">
         <ScrollView showsVerticalScrollIndicator={false}>
-          <Text style={{color: 'black', fontSize: 16, textAlign: 'justify'}}>
+          <Text
+            style={{
+              color: 'black',
+              fontSize: 16,
+              textAlign: 'justify',
+              zIndex: 1,
+              marginVertical: 20,
+            }}>
             Tafhim-ul-Quran is one of the most extensive and popular works on
             the translation and commentary of the Holy Qur'an. Spread over 6
             volumes, it took Syed Abul Ala Maududi 30 years to complete, from

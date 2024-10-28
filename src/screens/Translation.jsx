@@ -9,16 +9,15 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
 import React, {useEffect, useState} from 'react';
-import Sound from 'react-native-sound';
 import RNFS from 'react-native-fs';
 import CustomHeader from '../components/CustomHeader';
-import {surah} from '../components/SurahList';
 import {useNavigation} from '@react-navigation/native';
 import {Urdu_data} from '../components/UrduTranslation';
-const SurahName = Urdu_data.map(item => item);
-console.log('SurahName', SurahName);
+
 export default function Translation({route}) {
-  const {text} = route.params;
+  const {text, id} = route.params;
+  const category = Urdu_data.find(item => item.cat_id === id);
+
   return (
     <>
       <CustomHeader text={text} />
@@ -27,85 +26,30 @@ export default function Translation({route}) {
         style={{flex: 1, paddingHorizontal: 20}}
         resizeMode="cover">
         <FlatList
-          data={SurahName}
+          data={category.surah_data}
+          // keyExtractor={item => item.id.toString()}
           showsVerticalScrollIndicator={false}
+          maxToRenderPerBatch={10}
           renderItem={({item, index}) => (
-            <SurahComponent key={index} item={item} />
+            <SurahComponent key={index} item={item} index={index} />
           )}
         />
-        {/* <ScrollView showsVerticalScrollIndicator={false}>
-          {surah.map((item, index) => {
-            return <SurahComponent key={index} item={item} />;
-          })}
-        </ScrollView> */}
       </ImageBackground>
     </>
   );
 }
 
-const SurahComponent = ({item}) => {
+const SurahComponent = ({item, index}) => {
   const [downloading, setDownloading] = useState(false);
-  const data = item.surah_data;
-  console.log(data);
-  const volumeData = data.map((item, index) => {
-    return item.surah_name;
-  });
-  console.log('volumeData', volumeData);
-  const SurahName = volumeData.map(item => item);
-  console.log(SurahName);
-
-  let sound;
-  // Load the sound when the component mounts
-  const getAudio = () => {
-    // Load audio file from the app bundle
-    sound = new Sound(item.url, Sound.MAIN_BUNDLE, error => {
-      if (error) {
-        console.log('Failed to load the sound', error);
-        // playAudio();
-        return;
-      }
-      playAudio();
-      console.log('Sound loaded successfully');
-    });
-    // Clean up the sound on unmount
-    return () => {
-      sound.release(); // Release the resource when the component unmounts
-    };
-  };
-
-  const playAudio = () => {
-    if (sound) {
-      sound?.play(success => {
-        if (success) {
-          console.log('Successfully played the sound');
-        } else {
-          console.log('Playback failed');
-        }
-      });
-    } else {
-      getAudio();
-    }
-  };
-
-  const pauseAudio = () => {
-    sound.pause(() => {
-      console.log('Audio paused');
-    });
-  };
-
-  const stopAudio = () => {
-    sound.stop(() => {
-      console.log('Audio stopped');
-    });
-  };
 
   // Download audio function
   const downloadAudio = async => {
     setDownloading(true);
 
     const audioUrl = item.url;
-    // 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0003)fateha/surahe%20fateha.mp3'; // Replace with actual audio file URL
-    const downloadDest = `${RNFS.DownloadDirectoryPath}/audio.mp3`; // Android: Download folder
+    // console.log('item.url', audioUrl);
+    // ( 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0003)fateha/surahe%20fateha.mp3',);
+    const downloadDest = `${RNFS.DownloadDirectoryPath}/${item.surah_name}.mp3`; // Android: Download folder
 
     RNFS.downloadFile({
       fromUrl: audioUrl,
@@ -115,7 +59,7 @@ const SurahComponent = ({item}) => {
         setDownloading(false);
         Alert.alert(
           'Download complete',
-          'Audio has been downloaded successfully!',
+          `${item.surah_name} has been downloaded successfully!`,
         );
         console.log('File downloaded to:', downloadDest);
       })
@@ -129,18 +73,14 @@ const SurahComponent = ({item}) => {
       });
   };
   const navigation = useNavigation();
-  const name = item.title;
+  const name = item.surah_name;
   const url = item.url;
   return (
     <TouchableOpacity
       onPress={() =>
         navigation.navigate('PlayAudio', {
-          playAudio,
-          pauseAudio,
-          stopAudio,
+          item,
           name,
-
-          downloadAudio,
         })
       }
       style={{
@@ -153,13 +93,10 @@ const SurahComponent = ({item}) => {
         marginVertical: 10,
       }}>
       <View style={{flexDirection: 'row', gap: 10}}>
-        <Text style={{color: 'black', fontSize: 18}}>{item.id}.</Text>
-        <Text style={{color: 'black', fontSize: 18}}>{SurahName}</Text>
+        <Text style={{color: 'black', fontSize: 18}}>{index + 1}.</Text>
+        <Text style={{color: 'black', fontSize: 18}}>{item.surah_name}</Text>
       </View>
       <View style={{flexDirection: 'row', gap: 10}}>
-        {/* <TouchableOpacity onPress={pauseAudio}>
-          <Icon name="pause" color="black" size={20} />
-        </TouchableOpacity> */}
         <TouchableOpacity onPress={downloadAudio}>
           {downloading ? (
             <Icon name="spinner" color="black" size={25} />
