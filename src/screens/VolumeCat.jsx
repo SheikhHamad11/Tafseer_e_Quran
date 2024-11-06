@@ -1,20 +1,10 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  ImageBackground,
-  Image,
-  Pressable,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, Pressable, ScrollView, } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import CustomHeader from '../components/CustomHeader';
-import {surah} from '../components/SurahList';
-import {Volume} from '../components/VolumeList';
-export default function Component1() {
+import { Volume } from '../components/VolumeList';
+export default function VolumeCat() {
   return (
     <>
       <CustomHeader text={'Tafheem-ul-Quran'} />
@@ -26,30 +16,25 @@ export default function Component1() {
           {Volume.map((item, index) => {
             return <Component key={index} id={item.vol_id} item={item} />;
           })}
-
-          {/* {surah.map((item, index) => {
-            return <SurahComponent key={index} item={item} />;
-          })} */}
         </ScrollView>
       </ImageBackground>
     </>
   );
 }
 
-const Component = ({item, id}) => {
+const Component = ({ item, id }) => {
   const navigation = useNavigation();
-  // const data = item.surah_data;
   const volumeData = item.surah_data.map((item, index) => {
     return item;
   });
 
   return (
     <Pressable
-      onPress={() => navigation.navigate('VolumePage', {id, volumeData})}
+      onPress={() => navigation.navigate('VolumePage', { id, volumeData })}
       style={styles.row}>
       <Icon name="folder" size={20} color="black" />
-      <View style={{marginLeft: 20}}>
-        <Text style={{color: 'black', fontSize: 18}}>Volume {id}</Text>
+      <View style={{ marginLeft: 20 }}>
+        <Text style={{ color: 'black', fontSize: 18 }}>Volume {id}</Text>
       </View>
     </Pressable>
   );

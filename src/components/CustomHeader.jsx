@@ -1,9 +1,9 @@
-import {View, Text, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import Header from './Modal';
-export default function CustomHeader({text}) {
+export default function CustomHeader({ text }) {
   const [modalVisible, setModalVisible] = useState(false);
   const navigation = useNavigation();
   return (
@@ -28,7 +28,7 @@ export default function CustomHeader({text}) {
           }}>
           {text}
         </Text>
-        <TouchableOpacity onPress={() => setModalVisible(true)}>
+        <TouchableOpacity style={{ width: 60, justifyContent: 'center', alignItems: 'flex-end' }} onPress={() => setModalVisible(true)}>
           <Icon name="ellipsis-v" size={25} color={'black'} />
         </TouchableOpacity>
       </View>

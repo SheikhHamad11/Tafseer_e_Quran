@@ -49,7 +49,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download2.quranurdu.com/Al%20Quran%20with%20Urdu%20Translation%20by%20Imam%20Al%20Sadais%20and%20Shraim/006sAnham.mp3',
+        url: 'http://download2.quranurdu.com/Al%20Quran%20with%20Urdu%20Translation%20by%20Imam%20Al%20Sadais%20and%20Shraim/006s-Anham.mp3',
       },
       {
         surah_id: 7,
@@ -65,7 +65,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download2.quranurdu.com/Al%20Quran%20with%20Urdu%20Translation%20by%20Imam%20Al%20Sadais%20and%20Shraim/008fal.mp3',
+        url: 'http://download2.quranurdu.com/Al%20Quran%20with%20Urdu%20Translation%20by%20Imam%20Al%20Sadais%20and%20Shraim/008s-Anfal.mp3',
       },
       {
         surah_id: 9,
@@ -97,7 +97,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download2.quranurdu.com/Al%20Quran%20with%20Urdu%20Translation%20by%20Imam%20Al%20Sadais%20and%20Shraim/012s-Yusuf.mp3',
+        url: 'http://download2.quranurdu.com/Al%20Quran%20with%20Urdu%20Translation%20by%20Imam%20Al%20Sadais%20and%20Shraim/012s-Yousuf.mp3',
       },
       {
         surah_id: 13,
@@ -113,7 +113,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download2.quranurdu.com/Al%20Quran%20with%20Urdu%20Translation%20by%20Imam%20Al%20Sadais%20and%20Shraim/014s-Ibrahim.mp3',
+        url: 'http://download2.quranurdu.com/Al%20Quran%20with%20Urdu%20Translation%20by%20Imam%20Al%20Sadais%20and%20Shraim/014s-Ibraheem.mp3',
       },
       {
         surah_id: 15,
@@ -929,6 +929,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 116,
@@ -936,6 +937,8 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/002-Al%20Baqara-Ruku-01.mp3'
+
       },
       {
         surah_id: 117,
@@ -943,6 +946,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/003-Ale%20Imran-Ruku-01.mp3'
       },
       {
         surah_id: 118,
@@ -950,6 +954,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/004-Al%20Nisa-Ruku-01.mp3'
       },
       {
         surah_id: 119,
@@ -957,6 +962,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/005-Al%20Maeda-Ruku-01.mp3'
       },
       {
         surah_id: 120,
@@ -964,6 +970,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/006-Al%20Anaam-Ruku-01.mp3'
       },
       {
         surah_id: 121,
@@ -971,6 +978,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Aaraf-Ruku-01.mp3'
       },
       {
         surah_id: 122,
@@ -978,6 +986,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/008-Al%20Anfaal-Ruku-01.mp3'
       },
       {
         surah_id: 123,
@@ -985,6 +994,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/009-Al%20Tauba-Ruku-01.mp3'
       },
       {
         surah_id: 124,
@@ -992,6 +1002,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/010-Younus-Ruku-01.mp3'
       },
       {
         surah_id: 125,
@@ -999,6 +1010,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/011-Hood-Ruku-01.mp3'
       },
       {
         surah_id: 126,
@@ -1006,6 +1018,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/012-Yousuf-Ruku-01.mp3'
       },
       {
         surah_id: 127,
@@ -1013,6 +1026,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/013-Al%20Raad-Ruku-01.mp3'
       },
       {
         surah_id: 128,
@@ -1020,6 +1034,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/014-Ibrahim-Ruku-01.mp3'
       },
       {
         surah_id: 129,
@@ -1027,6 +1042,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Hijr-Ruku-01.mp3'
       },
       {
         surah_id: 130,
@@ -1034,6 +1050,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Nahal-Ruku-01.mp3'
       },
       {
         surah_id: 131,
@@ -1041,6 +1058,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Israil-Ruku-01.mp3'
       },
       {
         surah_id: 132,
@@ -1048,6 +1066,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Kahaf-Ruku-01.mp3'
       },
       {
         surah_id: 133,
@@ -1055,6 +1074,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Mariyam-Ruku-01.mp3'
       },
       {
         surah_id: 134,
@@ -1062,6 +1082,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Taha-Ruku-01.mp3'
       },
       {
         surah_id: 135,
@@ -1069,6 +1090,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Ambia-Ruku-01.mp3'
       },
       {
         surah_id: 136,
@@ -1076,6 +1098,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Hajj-Ruku-01.mp3'
       },
       {
         surah_id: 137,
@@ -1083,6 +1106,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Mouminoon-Ruku-01.mp3'
       },
       {
         surah_id: 138,
@@ -1090,6 +1114,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Noor-Ruku-01.mp3'
       },
       {
         surah_id: 139,
@@ -1097,6 +1122,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Furqaan-Ruku-01.mp3'
       },
       {
         surah_id: 140,
@@ -1104,6 +1130,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Shuara-Ruku-01.mp3'
       },
       {
         surah_id: 141,
@@ -1111,6 +1138,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Namal-Ruku-01.mp3'
       },
       {
         surah_id: 142,
@@ -1118,6 +1146,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Qasas-Ruku-01.mp3'
       },
       {
         surah_id: 143,
@@ -1125,6 +1154,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Ankaboot-Ruku-01.mp3'
       },
       {
         surah_id: 144,
@@ -1132,6 +1162,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Room-Ruku-01.mp3'
       },
       {
         surah_id: 145,
@@ -1139,6 +1170,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Luqman-Ruku-01.mp3'
       },
       {
         surah_id: 146,
@@ -1146,6 +1178,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Sajdah-Ruku-01.mp3'
       },
       {
         surah_id: 147,
@@ -1153,6 +1186,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Ahzab-Ruku-01.mp3'
       },
       {
         surah_id: 148,
@@ -1160,6 +1194,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Saba-Ruku-01.mp3'
       },
       {
         surah_id: 149,
@@ -1167,6 +1202,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Faatir-Ruku-01.mp3'
       },
       {
         surah_id: 150,
@@ -1174,6 +1210,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Yaseen-Ruku-01.mp3'
       },
       {
         surah_id: 151,
@@ -1181,6 +1218,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Safaat-Ruku-01.mp3'
       },
       {
         surah_id: 152,
@@ -1188,6 +1226,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Suaad-Ruku-01.mp3'
       },
       {
         surah_id: 153,
@@ -1195,6 +1234,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Zumr-Ruku-01.mp3'
       },
       {
         surah_id: 154,
@@ -1202,6 +1242,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Momin-Ruku-01.mp3'
       },
       {
         surah_id: 155,
@@ -1209,6 +1250,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 156,
@@ -1216,6 +1258,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 157,
@@ -1223,6 +1266,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 158,
@@ -1230,6 +1274,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 159,
@@ -1237,6 +1282,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 160,
@@ -1244,6 +1290,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 161,
@@ -1251,6 +1298,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 162,
@@ -1258,6 +1306,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 163,
@@ -1265,6 +1314,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 164,
@@ -1272,6 +1322,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 165,
@@ -1279,6 +1330,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 166,
@@ -1286,6 +1338,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 167,
@@ -1293,6 +1346,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 168,
@@ -1300,6 +1354,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 169,
@@ -1307,6 +1362,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 170,
@@ -1314,6 +1370,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 171,
@@ -1321,6 +1378,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 172,
@@ -1328,6 +1386,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 173,
@@ -1335,6 +1394,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 174,
@@ -1342,6 +1402,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 175,
@@ -1349,6 +1410,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 176,
@@ -1356,6 +1418,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 177,
@@ -1363,6 +1426,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 178,
@@ -1370,6 +1434,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 179,
@@ -1377,6 +1442,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 180,
@@ -1384,6 +1450,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 181,
@@ -1391,6 +1458,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 182,
@@ -1398,6 +1466,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 183,
@@ -1405,6 +1474,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 184,
@@ -1412,6 +1482,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 185,
@@ -1419,6 +1490,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 186,
@@ -1426,6 +1498,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 187,
@@ -1433,6 +1506,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 188,
@@ -1440,6 +1514,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 189,
@@ -1447,6 +1522,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 190,
@@ -1454,6 +1530,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 191,
@@ -1461,6 +1538,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 192,
@@ -1468,6 +1546,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 193,
@@ -1475,6 +1554,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 194,
@@ -1482,6 +1562,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 195,
@@ -1489,6 +1570,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 196,
@@ -1496,6 +1578,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 197,
@@ -1503,6 +1586,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 198,
@@ -1510,6 +1594,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 199,
@@ -1517,6 +1602,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 200,
@@ -1524,6 +1610,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 201,
@@ -1531,6 +1618,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 202,
@@ -1538,6 +1626,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 203,
@@ -1545,6 +1634,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 204,
@@ -1552,6 +1642,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 205,
@@ -1559,6 +1650,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 206,
@@ -1566,6 +1658,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 207,
@@ -1573,6 +1666,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 208,
@@ -1580,6 +1674,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 209,
@@ -1587,6 +1682,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 210,
@@ -1594,6 +1690,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 211,
@@ -1601,6 +1698,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 212,
@@ -1608,6 +1706,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 213,
@@ -1615,6 +1714,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 214,
@@ -1622,6 +1722,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 215,
@@ -1629,6 +1730,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 216,
@@ -1636,6 +1738,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 217,
@@ -1643,6 +1746,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 218,
@@ -1650,6 +1754,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 219,
@@ -1657,6 +1762,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 220,
@@ -1664,6 +1770,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 221,
@@ -1671,6 +1778,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 222,
@@ -1678,6 +1786,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 223,
@@ -1685,6 +1794,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 224,
@@ -1692,6 +1802,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 225,
@@ -1699,6 +1810,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 226,
@@ -1706,6 +1818,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 227,
@@ -1713,6 +1826,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
       {
         surah_id: 228,
@@ -1720,6 +1834,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Al%20Quran%20with%20Pushto%20Translation-Recitation%20By%20-%20Mishari%20Bin%20Rashid%20Al%20Afasi%20Translation%20By%20-%20Shafeeq%20-ur-%20Rahman/007-Al%20Fatiha-Ruku-01.mp3'
       },
     ],
   },
@@ -1733,7 +1848,7 @@ export const Urdu_data = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download2.quranurdu.com/Quran_Hindi/0-Al-Fatiha.mp3',
+        url: 'http://download2.quranurdu.com/Quran_Hindi/001-Al-Fatiha.mp3',
       },
       {
         surah_id: 230,

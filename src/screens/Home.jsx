@@ -1,24 +1,12 @@
-import {useNavigation} from '@react-navigation/native';
-import React, {useEffect, useState} from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  ScrollView,
-  Dimensions,
-  FlatList,
-  Alert,
-} from 'react-native';
-const {width, height} = Dimensions.get('window');
-console.log(height);
+import { useNavigation } from '@react-navigation/native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity, ScrollView, Dimensions, Alert } from 'react-native';
+const { width, height } = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Translation_data} from '../components/Translation_cat';
+import { Translation_data } from '../components/Translation_cat';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function Home({navigation}) {
+export default function Home({ navigation }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleAccordion = () => {
@@ -26,14 +14,19 @@ export default function Home({navigation}) {
   };
 
   useEffect(() => {
-    checkForResumeData();
+    setTimeout(() => {
+      checkForResumeData();
+    }, 500);
+
   }, []);
 
   const checkForResumeData = async () => {
     try {
-      const savedPosition = await AsyncStorage.getItem('playbackPosition');
-      const savedSurahName = await AsyncStorage.getItem('surahName');
       const savedSurahId = await AsyncStorage.getItem('surahId');
+      console.log(savedSurahId);
+
+      const savedPosition = await AsyncStorage.getItem(`playbackPosition_${savedSurahId}`);
+      const savedSurahName = await AsyncStorage.getItem('surahName');
       const savedSurahUrl = await AsyncStorage.getItem('surahUrl');
       // console.log('get position', savedPosition, savedSurahName);
 
@@ -45,7 +38,7 @@ export default function Home({navigation}) {
             {
               text: 'Yes',
               onPress: () => {
-                navigation.navigate('VolumePlay', {
+                navigation.navigate('MediaPlayer', {
                   item: {
                     surah_id: savedSurahId, // assuming you have saved surah_id
                     surah_name: savedSurahName,
@@ -58,8 +51,8 @@ export default function Home({navigation}) {
             {
               text: 'No',
               onPress: () => {
-                AsyncStorage.removeItem('playbackPosition');
-                AsyncStorage.removeItem('surahName');
+                // AsyncStorage.removeItem('playbackPosition');
+                // AsyncStorage.removeItem('surahName');
               },
             },
           ],
@@ -106,7 +99,7 @@ export default function Home({navigation}) {
               style={styles.image}
               source={require('../../src/assets/books.png')}
             />
-            <View style={{marginLeft: 10}}>
+            <View style={{ marginLeft: 10 }}>
               <Text style={styles.text}>Tafheem-ul-Quran</Text>
               <Text style={styles.text}>(ابو الاعلیٰ مودودی)</Text>
             </View>
@@ -117,7 +110,7 @@ export default function Home({navigation}) {
               style={styles.image2}
               source={require('../../src/assets/img4.png')}
             />
-            <View style={{marginLeft: 10}}>
+            <View style={{ marginLeft: 10 }}>
               <Text style={styles.text}>Quran Translation</Text>
               <Text style={styles.text}>(ترجمہ کے ساتھ قرآن)</Text>
             </View>
@@ -125,12 +118,6 @@ export default function Home({navigation}) {
 
           {isExpanded && (
             <>
-              {/* <FlatList
-                data={Translation_data}
-                renderItem={({item, index}) => (
-                  <Component key={index} text={item.cat_name} id={item.id} />
-                )}
-              /> */}
               {Translation_data.map((item, index) => {
                 return (
                   <Component key={index} text={item.cat_name} id={item.id} />
@@ -138,23 +125,23 @@ export default function Home({navigation}) {
               })}
             </>
           )}
-          <View style={{height: 50}} />
+          <View style={{ height: 50 }} />
         </ScrollView>
       </ImageBackground>
     </>
   );
 }
 
-const Component = ({text, id}) => {
+const Component = ({ text, id }) => {
   const navigation = useNavigation();
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('Translation', {text, id})}
+      onPress={() => navigation.navigate('Translation', { text, id })}
       style={styles.row2}>
       <Icon name="folder" size={20} color="black" />
-      <View style={{marginLeft: 20}}>
-        <Text style={{color: 'black', fontSize: 18}}>{text}</Text>
+      <View style={{ marginLeft: 20 }}>
+        <Text style={{ color: 'black', fontSize: 18 }}>{text}</Text>
       </View>
     </TouchableOpacity>
   );
