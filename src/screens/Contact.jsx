@@ -7,7 +7,7 @@ export default function Contact() {
     <>
       <CustomHeader text="Contact" />
       <ImageBackground
-        source={require('../../src/assets/quran.jpg')}
+        source={require('../../src/assets/new1.jpg')}
         style={{flex: 1, padding: 20}}
         resizeMode="cover">
         <Text style={{color: 'black', fontSize: 16}}>

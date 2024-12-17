@@ -1,71 +1,82 @@
-import { useNavigation } from '@react-navigation/native';
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity, ScrollView, Dimensions, Alert } from 'react-native';
-const { width, height } = Dimensions.get('window');
+import {useNavigation} from '@react-navigation/native';
+import React, {useEffect, useState} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+  Dimensions,
+  Alert,
+} from 'react-native';
+const {width, height} = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Translation_data } from '../components/Translation_cat';
+import {Translation_data} from '../components/Translation_cat';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import CustomAlert from '../components/AlertModal';
 
-export default function Home({ navigation }) {
+export default function Home({navigation}) {
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const [showAlert, setShowAlert] = useState(false);
+  const [savedSurahName, setSavedSurahName] = useState(null);
+  const [savedSurahId, setSavedSurahId] = useState(null);
+  const [savedPosition, setSavedPosition] = useState(null);
+  const [savedSurahUrl, setSavedSurahUrl] = useState(null);
   const toggleAccordion = () => {
     setIsExpanded(!isExpanded);
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      checkForResumeData();
-    }, 500);
+    const checkSavedData = async () => {
+      const surahId = await AsyncStorage.getItem('surahId');
+      const surahName = await AsyncStorage.getItem('surahName');
+      const position = await AsyncStorage.getItem(
+        `playbackPosition_${surahId}`,
+      );
+      const surahUrl = await AsyncStorage.getItem('surahUrl');
 
+      if (surahId && surahName && position && surahUrl) {
+        setSavedSurahName(surahName);
+        setSavedSurahId(surahId);
+        setSavedPosition(position);
+        setSavedSurahUrl(surahUrl);
+        setShowAlert(true); // Show the custom alert
+      }
+    };
+
+    checkSavedData();
   }, []);
 
-  const checkForResumeData = async () => {
-    try {
-      const savedSurahId = await AsyncStorage.getItem('surahId');
-      console.log(savedSurahId);
+  const handleResume = () => {
+    setShowAlert(false);
+    navigation.navigate('MediaPlayer', {
+      item: {
+        surah_id: savedSurahId,
+        surah_name: savedSurahName,
+        position: savedPosition,
+        url: savedSurahUrl,
+      },
+    });
+  };
 
-      const savedPosition = await AsyncStorage.getItem(`playbackPosition_${savedSurahId}`);
-      const savedSurahName = await AsyncStorage.getItem('surahName');
-      const savedSurahUrl = await AsyncStorage.getItem('surahUrl');
-      // console.log('get position', savedPosition, savedSurahName);
-
-      if (savedPosition && savedSurahName) {
-        Alert.alert(
-          'Resume Playback',
-          `Would you like to resume ${savedSurahName} from where you left off?`,
-          [
-            {
-              text: 'Yes',
-              onPress: () => {
-                navigation.navigate('MediaPlayer', {
-                  item: {
-                    surah_id: savedSurahId, // assuming you have saved surah_id
-                    surah_name: savedSurahName,
-                    position: savedPosition,
-                    url: savedSurahUrl,
-                  },
-                });
-              },
-            },
-            {
-              text: 'No',
-              onPress: () => {
-                // AsyncStorage.removeItem('playbackPosition');
-                // AsyncStorage.removeItem('surahName');
-              },
-            },
-          ],
-        );
-      }
-    } catch (error) {
-      console.error('Error retrieving playback data:', error);
-    }
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+    // Optionally clear saved data if needed
+    // await AsyncStorage.removeItem('playbackPosition');
+    // await AsyncStorage.removeItem('surahName');
   };
   return (
     <>
+      <CustomAlert
+        visible={showAlert}
+        onClose={handleCloseAlert}
+        onResume={handleResume}
+        surahName={savedSurahName}
+      />
       <ImageBackground
-        source={require('../../src/assets/quran.jpg')}
+        source={require('../../src/assets/new1.jpg')}
         style={styles.background}
         resizeMode="cover">
         <ScrollView
@@ -99,7 +110,7 @@ export default function Home({ navigation }) {
               style={styles.image}
               source={require('../../src/assets/books.png')}
             />
-            <View style={{ marginLeft: 10 }}>
+            <View style={{marginLeft: 10}}>
               <Text style={styles.text}>Tafheem-ul-Quran</Text>
               <Text style={styles.text}>(ابو الاعلیٰ مودودی)</Text>
             </View>
@@ -110,7 +121,7 @@ export default function Home({ navigation }) {
               style={styles.image2}
               source={require('../../src/assets/img4.png')}
             />
-            <View style={{ marginLeft: 10 }}>
+            <View style={{marginLeft: 10}}>
               <Text style={styles.text}>Quran Translation</Text>
               <Text style={styles.text}>(ترجمہ کے ساتھ قرآن)</Text>
             </View>
@@ -125,23 +136,23 @@ export default function Home({ navigation }) {
               })}
             </>
           )}
-          <View style={{ height: 50 }} />
+          <View style={{height: 50}} />
         </ScrollView>
       </ImageBackground>
     </>
   );
 }
 
-const Component = ({ text, id }) => {
+const Component = ({text, id}) => {
   const navigation = useNavigation();
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('Translation', { text, id })}
+      onPress={() => navigation.navigate('Translation', {text, id})}
       style={styles.row2}>
       <Icon name="folder" size={20} color="black" />
-      <View style={{ marginLeft: 20 }}>
-        <Text style={{ color: 'black', fontSize: 18 }}>{text}</Text>
+      <View style={{marginLeft: 20}}>
+        <Text style={{color: 'black', fontSize: 18}}>{text}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -155,8 +166,9 @@ const styles = StyleSheet.create({
     fontSize: height * 0.03,
     color: 'black',
   },
+
   row: {
-    backgroundColor: 'rgba(149, 129, 89, 0.9)',
+    backgroundColor: 'rgba(187, 148, 87, 0.8)',
     padding: 10,
     flexDirection: 'row',
     gap: 10,
@@ -165,7 +177,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   row2: {
-    backgroundColor: 'rgba(149, 129, 89, 0.9)',
+    backgroundColor: 'rgba(187, 148, 87, 0.8)',
     padding: 10,
     flexDirection: 'row',
     alignItems: 'center',

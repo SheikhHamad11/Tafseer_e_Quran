@@ -7,7 +7,7 @@ export default function About() {
     <>
       <CustomHeader text="About" />
       <ImageBackground
-        source={require('../../src/assets/quran.jpg')}
+        source={require('../../src/assets/new1.jpg')}
         style={{flex: 1, paddingHorizontal: 20}}
         resizeMode="cover">
         <ScrollView showsVerticalScrollIndicator={false}>

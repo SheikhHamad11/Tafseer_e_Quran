@@ -27,7 +27,11 @@ const Header = ({modalVisible, setModalVisible}) => {
           <TouchableOpacity
             className="items-center justify-center"
             onPress={() => Linking.openURL('https:www.quranurdu.com/tafa/')}>
-            <Icon name="earth-americas" size={35} color="rgba(0,0,0,0.9)" />
+            <Icon
+              name="earth-americas"
+              size={30}
+              color="rgba(187, 148, 87, 1)"
+            />
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -36,7 +40,7 @@ const Header = ({modalVisible, setModalVisible}) => {
               setModalVisible(false);
               navigation.navigate('Contact');
             }}>
-            <Icon name="envelope" size={35} color="rgba(0,0,0,0.9)" />
+            <Icon name="envelope" size={30} color="rgba(187, 148, 87, 1)" />
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -45,7 +49,7 @@ const Header = ({modalVisible, setModalVisible}) => {
               setModalVisible(false);
               navigation.navigate('About');
             }}>
-            <Icon name="file-alt" size={35} color="rgba(0,0,0,0.9)" />
+            <Icon name="file-alt" size={30} color="rgba(187, 148, 87, 1)" />
           </TouchableOpacity>
         </View>
       </TouchableOpacity>
@@ -64,12 +68,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.3)',
   },
   modalContent: {
-    backgroundColor: 'rgba(149, 129, 69, 0.7)',
+    backgroundColor: 'black',
     marginEnd: 10,
-    padding: 8,
+    padding: 10,
     borderRadius: 10,
     alignItems: 'center',
-    gap: 8,
+    gap: 10,
     elevation: 10,
   },
 });

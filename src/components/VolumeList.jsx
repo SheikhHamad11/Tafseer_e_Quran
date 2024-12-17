@@ -28,7 +28,7 @@ export const Volume = [
       },
       {
         surah_id: 4,
-        surah_name: 'Al-Baqara',
+        surah_name: 'Al-Baqrah',
         live_path: '',
         download_path: null,
         download_flag: null,
@@ -81,11 +81,11 @@ export const Volume = [
       },
       {
         surah_id: 10,
-        surah_name: 'Al-Anfal',
+        surah_name: 'Al-Anfaal',
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(008)alanfal/intro(al-anfal).mp3',
       },
       {
         surah_id: 11,
@@ -93,7 +93,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(009)at-tauba/intro(at-tauba).mp3',
       },
       {
         surah_id: 12,
@@ -101,7 +101,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(010)younus/intro(younus).mp3',
       },
       {
         surah_id: 13,
@@ -109,7 +109,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(011)huud/intro(huud).mp3',
       },
       {
         surah_id: 14,
@@ -117,7 +117,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(012)yousuf/intro(yousuf).mp3',
       },
       {
         surah_id: 15,
@@ -125,7 +125,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(013)ar-raad/intro(ar-raad).mp3',
       },
       {
         surah_id: 16,
@@ -133,7 +133,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(014)ibrahim/intro(ibrahim).mp3',
       },
       {
         surah_id: 17,
@@ -141,7 +141,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(015)al-hijr/intro(al-hijr).mp3',
       },
       {
         surah_id: 18,
@@ -149,7 +149,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(016)an-nahal/intro(an-nahal).mp3',
       },
       {
         surah_id: 19,
@@ -157,7 +157,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(007)alaaraf/intro(al-aaraf).mp3',
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(017)bani-israil/intro(bani-israil).mp3',
       },
     ],
   },
@@ -170,7 +170,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(018)alkahaf/al-kahaf(intro).mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(018)alkahaf/al-kahaf(intro).mp3',
       },
       {
         surah_id: 21,
@@ -178,7 +178,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(019)maryam/maryam(intro).mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(019)ma ryam/maryam(intro).mp3',
       },
       {
         surah_id: 22,
@@ -186,15 +186,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3',
       },
       {
         surah_id: 23,
-        surah_name: 'Al-Anbia',
+        surah_name: 'Al-Anbiya',
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(021)al-anbia/al-anbia(intro).mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(021)al-anbia/al-anbia(intro).mp3',
       },
       {
         surah_id: 24,
@@ -202,7 +202,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/al-hajj(intro).mp3',
       },
       {
         surah_id: 25,
@@ -210,7 +210,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(023)al-mominoon/al-mominoon(intro).mp3',
       },
       {
         surah_id: 26,
@@ -218,7 +218,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(024)an-noor/an-noor(intro).mp3',
       },
       {
         surah_id: 27,
@@ -226,7 +226,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(025)al-furqan/al-furqan(intro).mp3',
       },
       {
         surah_id: 28,
@@ -234,7 +234,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(026)ash-shoara/ash-shoara(intro).mp3',
       },
       {
         surah_id: 29,
@@ -242,7 +242,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(027)an-namal/an-namal(intro).mp3',
       },
       {
         surah_id: 30,
@@ -250,7 +250,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(028)al-qasas/al-qasas(intro).mp3',
       },
       {
         surah_id: 31,
@@ -258,7 +258,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(029)al-ankaboot/al-ankaboot(intro).mp3',
       },
       {
         surah_id: 32,
@@ -266,7 +266,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(020)taha/(intro)taha.mp3'
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(030)ar-room/ar-room(intro).mp3',
       },
     ],
   },
@@ -279,20 +279,23 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(31)luqman/luqman(intro).mp3',
       },
       {
         surah_id: 34,
-        surah_name: 'As-Sijda',
+        surah_name: 'As-Sajda',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(32)as-sijda/as-sijda(intro).mp3',
       },
       {
         surah_id: 35,
-        surah_name: 'Al-Ahzab',
+        surah_name: 'Al-Ahzaab',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(33)al-ahzab/al-ahzab(intro).mp3',
       },
       {
         surah_id: 36,
@@ -300,6 +303,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(34)saba/saba(intro).mp3',
       },
       {
         surah_id: 37,
@@ -307,13 +311,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(35)fatir/fatir(intro).mp3',
       },
       {
         surah_id: 38,
-        surah_name: 'Aaaseen',
+        surah_name: 'Yaseen',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(36)yaaseen/(intro)yaaseen.mp3',
       },
       {
         surah_id: 39,
@@ -321,6 +327,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(37)as-saaffat/as-saaffat(intro).mp3',
       },
       {
         surah_id: 40,
@@ -328,6 +335,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(38)suad/intro(suad).mp3',
       },
       {
         surah_id: 41,
@@ -335,6 +343,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(39)az-zumar/az-zumar(intro).mp3',
       },
       {
         surah_id: 42,
@@ -342,13 +351,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(40)al-momin/al-momin(intro).mp3',
       },
       {
         surah_id: 43,
-        surah_name: 'H.M.AS-Sijda',
+        surah_name: 'Ha-mim Sajda',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(41)h.m.as-sijda/hameemas-sijda(intro).mp3',
       },
       {
         surah_id: 44,
@@ -356,13 +367,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(42)ash-shoora/ash-shoora(intro).mp3',
       },
       {
         surah_id: 45,
-        surah_name: 'Az-Zukhraf',
+        surah_name: 'Az-Zukhruf',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(43)az-zukhraf/az-zukhruf(intro).mp3',
       },
       {
         surah_id: 46,
@@ -370,13 +383,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(44)ad-dukhan/ad-dukhan(intro).mp3',
       },
       {
         surah_id: 47,
-        surah_name: 'Al-Jasia',
+        surah_name: 'Al-Jasiya',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(45)al-jasia/al-jasiya(intro).mp3',
       },
       {
         surah_id: 48,
@@ -384,6 +399,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(46)al-ahqaf/al-ahqaf(intro).mp3',
       },
     ],
   },
@@ -396,6 +412,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 50,
@@ -403,6 +420,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 51,
@@ -410,6 +428,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 52,
@@ -417,6 +436,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 53,
@@ -424,6 +444,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 54,
@@ -431,6 +452,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 55,
@@ -438,6 +460,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 56,
@@ -445,6 +468,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 57,
@@ -452,13 +476,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 58,
-        surah_name: 'Al-Waqayya',
+        surah_name: 'Al-Waqiah',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 59,
@@ -466,6 +492,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 60,
@@ -473,6 +500,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 61,
@@ -480,6 +508,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 62,
@@ -487,6 +516,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 63,
@@ -494,13 +524,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 64,
-        surah_name: 'Al-Juma',
+        surah_name: 'Al-Jumah',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 65,
@@ -508,6 +540,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 66,
@@ -515,6 +548,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
       {
         surah_id: 67,
@@ -522,6 +556,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(47)mohammad/(intro)mohammad.mp3',
       },
     ],
   },
@@ -534,6 +569,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 69,
@@ -541,6 +577,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 70,
@@ -548,6 +585,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 71,
@@ -555,13 +593,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 72,
-        surah_name: 'Al-Maarij',
+        surah_name: "Al-Ma'arij",
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 73,
@@ -569,6 +609,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 74,
@@ -576,6 +617,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 75,
@@ -583,6 +625,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 76,
@@ -590,13 +633,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 77,
-        surah_name: 'Al-Qiyamma',
+        surah_name: 'Al-Qiyamah',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 78,
@@ -604,6 +649,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 79,
@@ -611,6 +657,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 80,
@@ -618,6 +665,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 81,
@@ -625,20 +673,23 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 82,
-        surah_name: 'Abass',
+        surah_name: 'Abas',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 83,
-        surah_name: 'At-Takveer',
+        surah_name: 'At-Takweer',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 84,
@@ -646,6 +697,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 85,
@@ -653,6 +705,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 86,
@@ -660,6 +713,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 87,
@@ -667,6 +721,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 88,
@@ -674,6 +729,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 89,
@@ -681,6 +737,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 90,
@@ -688,6 +745,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 91,
@@ -695,6 +753,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 92,
@@ -702,6 +761,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 93,
@@ -709,6 +769,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 94,
@@ -716,6 +777,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 95,
@@ -723,13 +785,15 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 96,
-        surah_name: 'Alamnashrah',
+        surah_name: 'Al-Inshirah',
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 97,
@@ -737,6 +801,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 98,
@@ -744,6 +809,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 99,
@@ -751,6 +817,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 100,
@@ -758,6 +825,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 101,
@@ -765,6 +833,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 102,
@@ -772,6 +841,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 103,
@@ -779,6 +849,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 104,
@@ -786,6 +857,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 105,
@@ -793,6 +865,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 106,
@@ -800,6 +873,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 107,
@@ -807,6 +881,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 108,
@@ -814,6 +889,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 109,
@@ -821,6 +897,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 110,
@@ -828,6 +905,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 111,
@@ -835,6 +913,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 112,
@@ -842,6 +921,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 113,
@@ -849,6 +929,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 114,
@@ -856,6 +937,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 115,
@@ -863,6 +945,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
       {
         surah_id: 116,
@@ -870,6 +953,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(066)at-tehreem/at-tehreem(intro).mp3',
       },
     ],
   },
