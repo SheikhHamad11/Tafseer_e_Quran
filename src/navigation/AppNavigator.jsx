@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
+import React, { useState } from 'react';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import Home from '../screens/Home';
 import About from '../screens/About';
 import VolumeCat from '../screens/VolumeCat';
@@ -7,7 +7,7 @@ import Contact from '../screens/Contact';
 import Translation from '../screens/Translation';
 import VolumePage from '../screens/VolumePage';
 import MediaPlayer from '../screens/MediaPlayer';
-import {StatusBar} from 'react-native';
+import { StatusBar } from 'react-native';
 
 export default function AppNavigator() {
   const Stack = createStackNavigator();

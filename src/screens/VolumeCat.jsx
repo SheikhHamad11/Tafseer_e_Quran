@@ -8,9 +8,9 @@ import {
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import CustomHeader from '../components/CustomHeader';
-import {Volume} from '../components/VolumeList';
+import { Volume } from '../components/VolumeList';
 export default function VolumeCat() {
   return (
     <>
@@ -21,7 +21,7 @@ export default function VolumeCat() {
         resizeMode="cover">
         <ScrollView style={styles.contentContainer}>
           {Volume.map((item, index) => {
-            return <Component key={index} id={item.vol_id} item={item} />;
+            return <Component key={index} cat_id={item.cat_id} item={item} />;
           })}
         </ScrollView>
       </ImageBackground>
@@ -29,7 +29,7 @@ export default function VolumeCat() {
   );
 }
 
-const Component = ({item, id}) => {
+const Component = ({ item, cat_id }) => {
   const navigation = useNavigation();
   const volumeData = item.surah_data.map((item, index) => {
     return item;
@@ -37,11 +37,11 @@ const Component = ({item, id}) => {
 
   return (
     <Pressable
-      onPress={() => navigation.navigate('VolumePage', {id, volumeData})}
+      onPress={() => navigation.navigate('VolumePage', { cat_id, volumeData })}
       style={styles.row}>
       <Icon name="folder" size={20} color="black" />
-      <View style={{marginLeft: 20}}>
-        <Text style={{color: 'black', fontSize: 18}}>Volume {id}</Text>
+      <View style={{ marginLeft: 20 }}>
+        <Text style={{ color: 'black', fontSize: 18 }}>Volume {cat_id - 3}</Text>
       </View>
     </Pressable>
   );

@@ -1,11 +1,10 @@
-import React, {useEffect, useLayoutEffect, useState} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   Text,
   ImageBackground,
   TouchableOpacity,
   StyleSheet,
-  Alert,
-  View,
+  Alert, View,
   ActivityIndicator,
   AppState,
 } from 'react-native';
@@ -19,33 +18,58 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import CustomHeader from '../components/CustomHeader';
 import Icon from 'react-native-vector-icons/FontAwesome6';
 import Slider from '@react-native-community/slider';
+import { QuranContext } from '../hook/contextApi';
+import { Urdu_data } from '../components/UrduTranslation';
 
-export default function MediaPlayer({route}) {
-  const {item} = route.params;
-  // console.log({item});
+export default function MediaPlayer({ route }) {
+  const { item } = route.params;
+  const { lastSurahDataState } = useContext(QuranContext);
+  const [lastSurahData, setlastSurahData] = lastSurahDataState;
+  let {
 
+    Position,
+    lastIndex,
+    catId,
+    surahId
+  } = lastSurahData;
+  const [trackTitle, setTrackTitle] = useState('playing...');
+  const cat_id = item?.cat_id ? item.cat_id : catId;
+  const surah_id = item?.surah_id ? item.surah_id : surahId;
+
+  const [currentSurahIndex, setCurrentSurahIndex] = useState(item?.cat_id ? 0 : lastIndex);
+  const selectedItem = Urdu_data.find(item => item.cat_id === cat_id).surah_data.find(item => item.surah_id === surah_id)
+  const selectedUrls = selectedItem.url;
+  const surahUrls = Array.isArray(selectedUrls) ? selectedUrls : [selectedUrls]; // Get URL based on index
   const [isPlaying, setIsPlaying] = useState(false);
   const [position, setPosition] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [queueLength, setQueueLength] = useState(0);
+
+  const surahForPlay = surahUrls[currentSurahIndex]
+
+
 
   const savePlayBackPosition = async () => {
     // Remove the previous playback position
     const previousSurahId = await AsyncStorage.getItem('surahId');
-    if (previousSurahId && previousSurahId !== item.surah_id.toString()) {
+    if (previousSurahId && previousSurahId !== selectedItem.surah_id.toString()) {
       await AsyncStorage.removeItem(`playbackPosition_${previousSurahId}`);
     }
     const position = await TrackPlayer.getPosition();
-    const surahId = item.surah_id;
-    await AsyncStorage.setItem(
-      `playbackPosition_${surahId}`,
-      position.toString(),
-    );
-    await AsyncStorage.setItem('surahName', item.surah_name);
-    await AsyncStorage.setItem('surahId', item.surah_id.toString());
-    await AsyncStorage.setItem('surahUrl', item.url);
-    console.log('Position saved:', position);
+    const currentUrl = await TrackPlayer.getActiveTrack();
+    const title = currentUrl.title
+    const match = title?.match(/Rukoo (\d+)/);
+    const lastIndex = match ? parseInt(match[1], 10) : null;
+    let saveObject = JSON.stringify({
+      Position: position,
+      lastIndex: parseInt(lastIndex) - 1,
+      catId: item?.cat_id || catId,
+      surahId: selectedItem?.surah_id,
+      surahName: selectedItem?.surah_name
+    })
+    await AsyncStorage.setItem('surahData',
+      saveObject);
   };
-
   useEffect(() => {
     // AppState listener to detect app state changes
     const handleAppStateChange = nextAppState => {
@@ -71,15 +95,29 @@ export default function MediaPlayer({route}) {
     };
   }, [item]);
 
+  const isSameSurah = async () => {
+    const isServiceRunning = await TrackPlayer.isServiceRunning();
+
+    const activeTrack = await TrackPlayer.getActiveTrack();
+    const match = activeTrack?.id?.match(/^(\d+)_/);
+    const beforeUnderscoreIdIs = match ? match[1] : null;
+
+    if (isServiceRunning && selectedItem.surah_id == beforeUnderscoreIdIs) {
+      return true
+    } else return false
+  }
+
   useEffect(() => {
     setupPlayer();
+    // Setup player only if it's a different Surah
     const interval = setInterval(async () => {
-      const currentPosition = await TrackPlayer.getPosition();
       const trackDuration = await TrackPlayer.getDuration();
+      const currentPosition = await TrackPlayer.getPosition();
       setPosition(currentPosition);
       setDuration(trackDuration);
       // Update notification with position and duration
     }, 1000);
+
     const remotePlayListener = TrackPlayer.addEventListener(
       Event.RemotePlay,
       handleRemotePlay,
@@ -100,17 +138,9 @@ export default function MediaPlayer({route}) {
       stopListener.remove();
       clearInterval(interval);
       savePlayBackPosition();
-      // TrackPlayer.reset();
     };
-  }, []);
+  }, []); // Add selectedItem.surah_id as a dependency
 
-  // useEffect(() => {
-  //   // Stop the currently playing track if a new one is selected
-  //   return () => {
-  //     savePlayBackPosition();
-  //     TrackPlayer.stop();  // Stop the previous track when a new one starts
-  //   };
-  // }, [item.surah_id]);
 
   const handleSeek = async value => {
     await TrackPlayer.seekTo(value);
@@ -120,35 +150,40 @@ export default function MediaPlayer({route}) {
   const setupPlayer = async () => {
     try {
       const isServiceRunning = await TrackPlayer.isServiceRunning();
-
-      // Setup player only if the service is not already running
       if (!isServiceRunning) {
         await TrackPlayer.setupPlayer();
         console.log('TrackPlayer setup completed');
       } else {
         console.log('TrackPlayer service is already running');
       }
-
-      const currentTrack = await TrackPlayer.getCurrentTrack();
-      // Stop the current track if a new track is being added
-      if (currentTrack !== null && currentTrack !== item.surah_id) {
-        await TrackPlayer.reset();
+      const isSame = await isSameSurah(); // Await the result of the async function
+      console.log({ isSame, isServiceRunning });
+      if (item !== null) {
+        if (isSame) {
+          setIsPlaying(true)
+          const activeTrack = await TrackPlayer.getActiveTrack();
+          const title = activeTrack?.title || 'No Title';
+          const match = title?.match(/Rukoo (\d+)/);
+          const lastIndex = match ? parseInt(match[1], 10) : null;
+          await setTrackTitle(title)
+          await setCurrentSurahIndex(lastIndex - 1);
+          return
+        }
+        else await TrackPlayer.reset();
       }
 
+      // Add new track since it's different or there's no current track
       await TrackPlayer.add({
-        id: item.surah_id,
-        url: item.url,
-        title: item.surah_name,
-        artist: 'Unknown Artist',
+        id: `${selectedItem.surah_id}_${currentSurahIndex}`, // Unique ID for each part
+        url: surahForPlay,
+        title: `${selectedItem.surah_name} - Rukoo ${currentSurahIndex + 1}`,
+        artist: 'Tafheem-ul-Quran',
         artwork: require('../assets/new2.jpg'),
       });
-      // const surahId = await AsyncStorage.getItem('surahId');
-      console.log('surahId', item.surah_id);
-      const savedPosition = await AsyncStorage.getItem(
-        `playbackPosition_${item.surah_id}`,
-      );
-      if (savedPosition) {
-        await TrackPlayer.seekTo(Number(savedPosition));
+      await setTrackTitle(`${selectedItem.surah_name} - Rukoo ${currentSurahIndex + 1}`)
+      if (Position && !item?.cat_id) {
+        console.log(`Seeking to position: ${Position}`);
+        await TrackPlayer.seekTo(Number(Position));
       }
 
       await TrackPlayer.updateOptions({
@@ -171,16 +206,18 @@ export default function MediaPlayer({route}) {
         },
       });
 
-      console.log('TrackPlayer options updated');
     } catch (error) {
       console.error('Error setting up TrackPlayer:', error);
     }
   };
 
+
+
+
   const togglePlayback = async () => {
     try {
       // Check if URL exists
-      if (!item.url) {
+      if (!selectedItem.url) {
         Alert.alert('Playback Error', 'No URL found for this track.');
         return;
       }
@@ -188,10 +225,8 @@ export default function MediaPlayer({route}) {
       if (currentTrack == null) {
         // Reinitialize the track if it's not loaded
         await setupPlayer();
-        const savedPosition = await AsyncStorage.getItem('playbackPosition');
-
-        if (savedPosition) {
-          await TrackPlayer.seekTo(Number(savedPosition));
+        if (Position) {
+          await TrackPlayer.seekTo(Number(Position));
         }
 
         await TrackPlayer.play();
@@ -201,7 +236,6 @@ export default function MediaPlayer({route}) {
 
         if (playbackState === State.Playing) {
           await TrackPlayer.pause();
-          // savePlayBackPosition();
           setIsPlaying(false);
         } else {
           await TrackPlayer.play();
@@ -218,15 +252,22 @@ export default function MediaPlayer({route}) {
     }
   };
 
-  const stopPlayback = async () => {
-    const currentTrack = await TrackPlayer.getCurrentTrack();
-    if (currentTrack != null) {
-      await TrackPlayer.seekTo(0);
-      await TrackPlayer.stop(); // Stops the audio playback
-      setIsPlaying(false); // Update the UI to reflect that playback is stopped
-      console.log('Playback stopped');
-    }
-  };
+  useEffect(() => {
+    const trackEndListener = TrackPlayer.addEventListener(
+      Event.PlaybackQueueEnded,
+      async () => {
+        console.log('PlaybackQueueEnded')
+        await playNextTrack()
+      }
+    );
+
+    return () => {
+      trackEndListener.remove();
+    };
+  }, []);
+
+
+
 
   const handleRemotePlay = async () => {
     await TrackPlayer.play();
@@ -238,24 +279,120 @@ export default function MediaPlayer({route}) {
     setIsPlaying(false); // Set UI to show "Paused"
   };
 
-  const formatTime = seconds => {
-    const hrs = Math.floor(seconds / 3600);
-    const mins = Math.floor((seconds % 3600) / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${hrs > 0 ? hrs + ':' : ''}${
-      hrs > 0 ? (mins < 10 ? '0' : '') : ''
-    }${mins}:${secs < 10 ? '0' : ''}${secs}`;
+  const stopPlayback = async () => {
+    const currentTrack = await TrackPlayer.getCurrentTrack();
+    if (currentTrack != null) {
+      await TrackPlayer.seekTo(0);
+      await TrackPlayer.stop(); // Stops the audio playback
+      setIsPlaying(false); // Update the UI to reflect that playback is stopped
+      console.log('Playback stopped');
+    }
   };
+
+  const playNextTrack = async () => {
+    try {
+      // Ensure we don't go beyond the available tracks
+      setCurrentSurahIndex((prevIndex) => {
+        if (prevIndex < surahUrls.length - 1) {
+          const nextIndex = prevIndex + 1;
+          const nextSurahUrl = surahUrls[nextIndex];
+          console.log({ nextIndex, nextSurahUrl, surahForPlay, currentSurahIndex: prevIndex });
+
+          TrackPlayer.reset().then(() => {
+            TrackPlayer.add({
+              id: `${selectedItem.surah_id}_${nextIndex}`,
+              url: nextSurahUrl,
+              title: `${selectedItem.surah_name} - Rukoo ${nextIndex + 1}`,
+              artist: 'Tafheem-ul-Quran',
+              artwork: require('../assets/new2.jpg'),
+            }).then(() => {
+              setTrackTitle(`${selectedItem.surah_name} - Rukoo ${nextIndex + 1}`);
+              TrackPlayer.play();
+            });
+          });
+
+          setIsPlaying(true);
+          return nextIndex;
+        } else {
+          console.log('No more tracks to play.');
+          return prevIndex;
+        }
+      });
+    } catch (error) {
+      console.error('Error playing next track:', error);
+    }
+  };
+
+
+  // const playNextTrack = async () => {
+  //   try {
+  //     // Ensure we don't go beyond the available tracks
+  //     if (currentSurahIndex < surahUrls.length - 1) {
+  //       const nextIndex = currentSurahIndex + 1;
+  //       setCurrentSurahIndex((pre) => pre + 1);
+  //       const nextSurahUrl = surahUrls[nextIndex];
+  //       console.log({ nextIndex, nextSurahUrl, surahForPlay, currentSurahIndex })
+  //       await TrackPlayer.reset(); // Reset the player to avoid multiple tracks in the queue
+  //       setIsPlaying(true)
+  //       await TrackPlayer.add({
+  //         id: `${selectedItem.surah_id}_${nextIndex}`,
+  //         url: nextSurahUrl,
+  //         title: `${selectedItem.surah_name} - Rukoo ${nextIndex + 1}`,
+  //         artist: 'Tafheem-ul-Quran',
+  //         artwork: require('../assets/new2.jpg'),
+  //       });
+  //       await setTrackTitle(`${selectedItem.surah_name} - Rukoo ${nextIndex + 1}`)
+
+  //       await TrackPlayer.play(); // Start playing the next track
+  //     } else {
+  //       console.log('No more tracks to play.');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error playing next track:', error);
+  //   }
+  // };
+
+  const playPreviousTrack = async () => {
+    try {
+      // Ensure we don't go below the first track
+      if (currentSurahIndex > 0) {
+        const prevIndex = currentSurahIndex - 1;
+        setCurrentSurahIndex((pre) => pre - 1);
+        setIsPlaying(true)
+        const prevSurahUrl = surahUrls[prevIndex];
+        await TrackPlayer.reset(); // Reset the player for the new track
+
+        await TrackPlayer.add({
+          id: `${selectedItem.surah_id}_${prevIndex}`,
+          url: prevSurahUrl,
+          title: `${selectedItem.surah_name} - Rukoo ${prevIndex + 1}`,
+          artist: 'Tafheem-ul-Quran',
+          artwork: require('../assets/new2.jpg'),
+        });
+        await setTrackTitle(`${selectedItem.surah_name} - Rukoo ${prevIndex + 1}`)
+
+        await TrackPlayer.play(); // Start playing the previous track
+      } else {
+        console.log('No previous tracks to play.');
+      }
+    } catch (error) {
+      console.error('Error playing previous track:', error);
+    }
+  };
+
+
+
+
   return (
     <>
-      <CustomHeader text={item.surah_name} />
+      <CustomHeader text={selectedItem.surah_name} />
       <ImageBackground
         source={require('../assets/new1.jpg')}
-        style={{flex: 1, padding: 20}}
+        style={{ flex: 1, padding: 20 }}
         resizeMode="cover">
-        <View style={{marginVertical: 20}}>
+        <View style={{ marginVertical: 20 }}>
           <Slider
-            style={{width: '100%'}}
+            style={{ width: '100%' }}
             minimumValue={0}
             maximumValue={duration || 1}
             value={position}
@@ -264,12 +401,12 @@ export default function MediaPlayer({route}) {
             thumbTintColor="black"
             onSlidingComplete={handleSeek}
           />
-          {!item.url ? (
+          {!selectedItem.url ? (
             <Icon name="ban" size={25} color="black" />
           ) : !position && !duration ? (
             <ActivityIndicator
               color={'black'}
-              style={{marginHorizontal: 30}}
+              style={{ marginHorizontal: 30 }}
               size={25}
             />
           ) : (
@@ -284,19 +421,39 @@ export default function MediaPlayer({route}) {
             </View>
           )}
         </View>
-        <TouchableOpacity onPress={togglePlayback} style={styles.row}>
-          <View style={{flexDirection: 'row', gap: 10}}>
-            <Icon name={isPlaying ? 'pause' : 'play'} color="black" size={20} />
-            <Text style={styles.text}>{isPlaying ? 'Pause' : 'Play'}</Text>
-          </View>
-        </TouchableOpacity>
 
+        <Text style={{ color: 'black', textAlign: 'center', fontSize: 16 }}>{trackTitle ? trackTitle : "playing..."}</Text>
+
+        <View style={styles.controlContainer}>
+          <TouchableOpacity
+            onPress={playPreviousTrack}
+            disabled={currentSurahIndex <= 0}
+          >
+            <Icon name="backward" size={40} color="black" />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={togglePlayback}>
+            <Icon
+              name={isPlaying ? 'pause-circle' : 'play-circle'}
+              size={60}
+              color="black"
+            />
+          </TouchableOpacity>
+          {/* {currentSurahIndex < queueLength - 1 && ( */}
+          <TouchableOpacity
+            onPress={playNextTrack}
+          // disabled={currentSurahIndex >= queueLength - 1}
+          >
+            <Icon name="forward" size={40} color="black" />
+          </TouchableOpacity>
+          {/* } */}
+        </View>
+        {/* 
         <TouchableOpacity onPress={stopPlayback} style={styles.row}>
           <View style={{flexDirection: 'row', gap: 10}}>
             <Icon name="stop" color="black" size={20} />
             <Text style={styles.text}>Stop </Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </ImageBackground>
     </>
   );
@@ -317,4 +474,19 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
   },
+  controlContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 20,
+  },
 });
+
+const formatTime = seconds => {
+  const hrs = Math.floor(seconds / 3600);
+  const mins = Math.floor((seconds % 3600) / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${hrs > 0 ? hrs + ':' : ''}${hrs > 0 ? (mins < 10 ? '0' : '') : ''
+    }${mins}:${secs < 10 ? '0' : ''}${secs}`;
+};
+

@@ -1,4 +1,4 @@
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import {
   ActivityIndicator,
   Alert,
@@ -13,13 +13,12 @@ import {
 import DownloadCompleteModal from './DownloadModal';
 import RNFS from 'react-native-fs';
 import Icon from 'react-native-vector-icons/FontAwesome6';
-import {useState} from 'react';
-export const SurahComponent = ({item, index}) => {
+import { useState } from 'react';
+export const SurahComponent = ({ item, index, cat_id }) => {
   const [downloading, setDownloading] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
   const [downloadDestPath, setDownloadDestPath] = useState(null);
   const navigation = useNavigation();
-  const name = item.surah_name;
 
   const showToast = () => {
     ToastAndroid.showWithGravity(
@@ -125,8 +124,10 @@ export const SurahComponent = ({item, index}) => {
       <TouchableOpacity
         onPress={() =>
           navigation.navigate('MediaPlayer', {
-            item,
-            name,
+            item: {
+              ...item,
+              cat_id,
+            }
           })
         }
         style={{
@@ -138,7 +139,8 @@ export const SurahComponent = ({item, index}) => {
           borderRadius: 10,
           marginVertical: 10,
         }}>
-        <View style={{flexDirection: 'row', gap: 10}}>
+        {/* {console.log('item', item)} */}
+        <View style={{ flexDirection: 'row', gap: 10 }}>
           <ImageBackground
             source={require('../../src/assets/image4.png')}
             resizeMode="cover"
@@ -159,11 +161,11 @@ export const SurahComponent = ({item, index}) => {
               {index + 1}
             </Text>
           </ImageBackground>
-          <Text style={{color: 'black', fontSize: 18, alignSelf: 'center'}}>
+          <Text style={{ color: 'black', fontSize: 18, alignSelf: 'center' }}>
             {item.surah_name}
           </Text>
         </View>
-        <View style={{flexDirection: 'row', gap: 10}}>
+        <View style={{ flexDirection: 'row', gap: 10 }}>
           <TouchableOpacity onPress={downloadAudio}>
             {downloading ? (
               <ActivityIndicator color={'black'} size={25} />

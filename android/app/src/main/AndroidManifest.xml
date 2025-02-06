@@ -13,7 +13,7 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme"
-      android:usesCleartextTraffic="true"
+      android:usesCleartextTraffic="true" /* for using http api calls */ 
       android:supportsRtl="true">
         <service android:name="com.guichaguri.trackplayer.service.MusicService"
            android:enabled="true"

@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {Modal, View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import React, { useState } from 'react';
+import { Modal, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const CustomAlert = ({visible, onClose, onResume, surahName}) => {
+const CustomAlert = ({ visible, onClose, onResume, surahName }) => {
   return (
     <Modal
       transparent={true}
       animationType="fade"
-      visible={visible}
+      visible={true}
       statusBarTranslucent={true}
       onRequestClose={onClose}>
       <View style={styles.overlay}>
@@ -14,7 +14,7 @@ const CustomAlert = ({visible, onClose, onResume, surahName}) => {
           <Text style={styles.alertTitle}>Resume Playback</Text>
           <Text style={styles.alertMessage}>
             Would you like to resume
-            <Text style={{color: ' rgba(187, 148, 87, 1)'}}>
+            <Text style={{ color: ' rgba(187, 148, 87, 1)' }}>
               {' '}
               "{surahName}"{' '}
             </Text>
