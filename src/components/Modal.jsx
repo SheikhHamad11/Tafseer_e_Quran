@@ -5,13 +5,14 @@ import {
   View,
   Dimensions,
   Linking,
+  Pressable,
 } from 'react-native';
-import React, {useState} from 'react';
-import {Modal} from 'react-native';
+import React, { useState } from 'react';
+import { Modal } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
-const Header = ({modalVisible, setModalVisible}) => {
+const Header = ({ modalVisible, setModalVisible }) => {
   const closeModal = () => {
     setModalVisible(false);
   };
@@ -22,7 +23,7 @@ const Header = ({modalVisible, setModalVisible}) => {
       transparent={true}
       visible={modalVisible}
       onRequestClose={closeModal}>
-      <TouchableOpacity onPressOut={closeModal} style={styles.overlay}>
+      <Pressable onPressOut={closeModal} style={styles.overlay}>
         <View style={styles.modalContent}>
           <TouchableOpacity
             className="items-center justify-center"
@@ -52,7 +53,7 @@ const Header = ({modalVisible, setModalVisible}) => {
             <Icon name="file-alt" size={30} color="rgba(187, 148, 87, 1)" />
           </TouchableOpacity>
         </View>
-      </TouchableOpacity>
+      </Pressable>
     </Modal>
   );
 };

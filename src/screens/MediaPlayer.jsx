@@ -6,7 +6,8 @@ import {
   StyleSheet,
   Alert, View,
   ActivityIndicator,
-  AppState,
+  AppState, ToastAndroid, Platform, PermissionsAndroid,
+  Linking,
 } from 'react-native';
 import TrackPlayer, {
   AppKilledPlaybackBehavior,
@@ -14,19 +15,24 @@ import TrackPlayer, {
   Event,
   State,
 } from 'react-native-track-player';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import CustomHeader from '../components/CustomHeader';
 import Icon from 'react-native-vector-icons/FontAwesome6';
+import Icon1 from 'react-native-vector-icons/Ionicons';
 import Slider from '@react-native-community/slider';
 import { QuranContext } from '../hook/contextApi';
 import { Urdu_data } from '../components/UrduTranslation';
-
+import DownloadCompleteModal from '../components/DownloadModal';
+import RNFS from 'react-native-fs';
 export default function MediaPlayer({ route }) {
   const { item } = route.params;
   const { lastSurahDataState } = useContext(QuranContext);
   const [lastSurahData, setlastSurahData] = lastSurahDataState;
+  const [downloading, setDownloading] = useState(false);
+  const [isModalVisible, setModalVisible] = useState(false);
+  const [downloadDestPath, setDownloadDestPath] = useState(null);
   let {
-
     Position,
     lastIndex,
     catId,
@@ -315,6 +321,7 @@ export default function MediaPlayer({ route }) {
           return nextIndex;
         } else {
           console.log('No more tracks to play.');
+          showToast1()
           return prevIndex;
         }
       });
@@ -381,10 +388,113 @@ export default function MediaPlayer({ route }) {
   };
 
 
+  const showToast = () => {
+    ToastAndroid.showWithGravity(
+      'Your Download has Started',
+      ToastAndroid.SHORT,
+      ToastAndroid.TOP,
+    );
+  };
+
+  const showToast1 = () => {
+    ToastAndroid.showWithGravity(
+      'No More Tracks To Play',
+      ToastAndroid.SHORT,
+      ToastAndroid.BOTTOM,
+    );
+  };
+
+
+
+
+
+  const requestStoragePermission = async () => {
+    try {
+      if (Platform.OS === 'android') {
+        if (Platform.Version >= 33) {
+          return await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.READ_MEDIA_AUDIO,
+          ) === PermissionsAndroid.RESULTS.GRANTED;
+        } else if (Platform.Version >= 30) {
+          return await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+          ) === PermissionsAndroid.RESULTS.GRANTED;
+        } else {
+
+          return true;
+        }
+
+      }
+      return true;
+    } catch (err) {
+      console.warn(err);
+      return false;
+    }
+  };
+
+
+  const downloadAudio = async () => {
+    try {
+      // Request storage permission
+      const hasPermission = await requestStoragePermission();
+      if (!hasPermission) {
+        Alert.alert(
+          'Permission Denied',
+          'Storage permission is required to download audio files.',
+        );
+        return;
+      }
+
+      setDownloading(true);
+      const audioUrl = surahForPlay;
+      audioUrl && showToast();
+      let downloadDest;
+      if (Platform.OS === 'android') {
+        // Android 13+; save to internal directory
+        downloadDest = `${RNFS.DocumentDirectoryPath}/${item.surah_name}.mp3`;
+      } else {
+        // Older Android versions or iOS
+        downloadDest = `${RNFS.DownloadDirectoryPath}/${item.surah_name}.mp3`;
+      }
+
+      // Download the audio file
+      await RNFS.downloadFile({
+        fromUrl: audioUrl,
+        toFile: downloadDest,
+      }).promise;
+
+      setDownloading(false);
+      console.log('File downloaded to:', downloadDest);
+      setDownloadDestPath(downloadDest);
+      // Show the modal after download completes successfully
+      setModalVisible(true);
+    } catch (error) {
+      setDownloading(false);
+      Alert.alert(
+        'Download failed',
+        'An error occurred while downloading the file.',
+      );
+      console.log('Download error:', error);
+    }
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
+  };
+
+  // Extract the part you want
+  const fileName = surahForPlay.split('/').pop(); // Get the last part of the URL
+  const displayName = fileName.replace('.mp3', '');
 
 
   return (
     <>
+      <DownloadCompleteModal
+        visible={isModalVisible}
+        onClose={closeModal}
+        surahName={item?.surah_name}
+        downloadDest={downloadDestPath}
+      />
       <CustomHeader text={selectedItem.surah_name} />
       <ImageBackground
         source={require('../assets/new1.jpg')}
@@ -420,33 +530,45 @@ export default function MediaPlayer({ route }) {
               <Text style={styles.text}>{formatTime(duration)}</Text>
             </View>
           )}
+
+          <View style={{ flexDirection: 'row', alignSelf: 'center', gap: 10, marginTop: 10 }}>
+            <TouchableOpacity onPress={downloadAudio} disabled={downloading}>
+              {downloading ? (
+                <ActivityIndicator color='black' size={25} />
+              ) : (
+                <Icon name="download" color="black" size={25} />
+              )}
+            </TouchableOpacity>
+          </View>
         </View>
 
-        <Text style={{ color: 'black', textAlign: 'center', fontSize: 16 }}>{trackTitle ? trackTitle : "playing..."}</Text>
+        <Text style={{ color: 'black', textAlign: 'center', fontSize: 16 }}>{trackTitle ? trackTitle : "Loading..."}</Text>
 
         <View style={styles.controlContainer}>
           <TouchableOpacity
             onPress={playPreviousTrack}
             disabled={currentSurahIndex <= 0}
           >
-            <Icon name="backward" size={40} color="black" />
+            <Icon name="backward" size={30} color="black" />
           </TouchableOpacity>
           <TouchableOpacity onPress={togglePlayback}>
-            <Icon
+            <Icon1
               name={isPlaying ? 'pause-circle' : 'play-circle'}
               size={60}
               color="black"
             />
           </TouchableOpacity>
-          {/* {currentSurahIndex < queueLength - 1 && ( */}
+
           <TouchableOpacity
             onPress={playNextTrack}
-          // disabled={currentSurahIndex >= queueLength - 1}
+          // disabled={currentSurahIndex >= surahUrls.length - 1}
           >
-            <Icon name="forward" size={40} color="black" />
+            <Icon name="forward" size={30} color="black" />
           </TouchableOpacity>
-          {/* } */}
+
         </View>
+
+
         {/* 
         <TouchableOpacity onPress={stopPlayback} style={styles.row}>
           <View style={{flexDirection: 'row', gap: 10}}>

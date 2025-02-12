@@ -1,4 +1,4 @@
-package com.tafseer_e_quran
+package com.espis.tafseerequran
 import android.os.Bundle;
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

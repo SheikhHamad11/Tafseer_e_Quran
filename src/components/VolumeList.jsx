@@ -52,7 +52,7 @@ export const Volume = [
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0004)albaqara/rukoo13baqara.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0004)albaqara/rukoo14baqara.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0004)albaqara/rukoo15baqara.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0004)albaqara/rukoo26baqara.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0004)albaqara/rukoo16baqara.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0004)albaqara/rukoo17baqara.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0004)albaqara/rukoo18baqara.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume01/(0004)albaqara/rukoo19baqara.mp3',
@@ -250,7 +250,7 @@ export const Volume = [
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(008)alanfal/rukoo07alanfal.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(008)alanfal/rukoo08alanfal.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(008)alanfal/rukoo09alanfal.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(008)alanfal/rukoo010alanfal.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume02/(008)alanfal/rukoo10alanfal.mp3',
         ],
       },
       {
@@ -473,7 +473,7 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(019)ma ryam/maryam(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(019)maryam/maryam(intro).mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(019)maryam/rukoo01maryam.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(019)maryam/rukoo02maryam.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(019)maryam/rukoo03maryam.mp3',
@@ -526,15 +526,15 @@ export const Volume = [
         url: [
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/al-hajj(intro).mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo01alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo02alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo03alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo04alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo05alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo06alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo07alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo08alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo09alhajj.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume03/(022)al-hajj/rukoo10alhajj.mp3',
         ],
       },
       {
@@ -899,8 +899,8 @@ export const Volume = [
         url: ['http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(45)al-jasia/al-jasiya(intro).mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(45)al-jasia/rukoo01aljasiya.mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(45)al-jasia/rukoo01aljasiya.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(45)al-jasia/rukoo01aljasiya.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(45)al-jasia/rukoo01aljasiya.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(45)al-jasia/rukoo02aljasiya.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume04/(45)al-jasia/rukoo03aljasiya.mp3',
         ]
       },
       {
@@ -1254,9 +1254,9 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(073)al-muzzammil/al-muzzammil/al-muzzammil/al-muzzammil(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(073)al-muzzammil/al-muzzammil/rukoo01al-muzzammil/al-muzzammil.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(073)al-muzzammil/al-muzzammil/rukoo02al-muzzammil/al-muzzammil.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(073)al-muzzammil/al-muzzammil(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(073)al-muzzammil/rukoo01al-muzzammil.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(073)al-muzzammil/rukoo02al-muzzammil.mp3',
         ],
       },
       {
@@ -1266,9 +1266,10 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(074)/al-muddassir/al-muddassir(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(074)al-muddassir/rukoo01/al-muddassir.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(074)al-muddassir/rukoo02/al-muddassir.mp3',
+
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(074)al-muddassir/al-muddassir(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(074)al-muddassir/rukoo01al-muddassir.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(074)al-muddassir/rukoo02al-muddassir.mp3',
         ],
       },
       {
@@ -1278,9 +1279,9 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(075)/al-qiyama/al-qiyama(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(075)al-qiyama/rukoo01/al-qiyama.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(075)al-qiyama/rukoo02/al-qiyama.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(075)al-qiyamma/al-qiyama(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(075)al-qiyamma/rukoo01al-qiyama.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(075)al-qiyamma/rukoo02al-qiyama.mp3',
         ],
       },
       {
@@ -1290,9 +1291,9 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(076)/ad-dahr/ad-dahr(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(076)ad-dahr/rukoo01/ad-dahr.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(076)ad-dahr/rukoo02/ad-dahr.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(076)ad-dahr/ad-dahar(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(076)ad-dahr/rukoo01ad-dahar.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(076)ad-dahr/rukoo02ad-dahar.mp3',
         ],
       },
       {
@@ -1302,9 +1303,9 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(077)/al-mursalat/al-mursalat(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(077)al-mursalat/rukoo01/al-mursalat.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(077)al-mursalat/rukoo02/al-mursalat.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(077)al-mursalat/al-mursalat(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(077)al-mursalat/rukoo01al-mursalat.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(077)al-mursalat/rukoo02al-mursalat.mp3',
         ],
       },
       {
@@ -1314,9 +1315,9 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(078)/an-nazayaat/an-nazayaat(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(078)an-nazayaat/rukoo01/an-nazayaat.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(078)an-nazayaat/rukoo02/an-nazayaat.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(078)an-naba/an-naba(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(078)an-naba/rukoo01an-naba.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(078)an-naba/rukoo02an-naba.mp3',
         ],
       },
       {
@@ -1326,9 +1327,9 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(079)/an-nazayaat/an-nazayaat(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(079)an-nazayaat/rukoo01/an-nazayaat.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(079)an-nazayaat/rukoo02/an-nazayaat.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(079)an-nazayaat/an-nazayaat(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(079)an-nazayaat/rukoo01an-nazayaat.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(079)an-nazayaat/rukoo02an-nazayaat.mp3',
         ],
       },
       {
@@ -1701,7 +1702,7 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(113)al-falaq/al-falaq(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(113)al-falaq/muavezatain(intro).mp3',
           'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(113)al-falaq/rukoo01al-falaq.mp3',
         ],
       },
@@ -1711,10 +1712,7 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(114)an-naas/an-naas(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(114)an-naas/rukoo01an-naas.mp3',
-        ],
+        url: 'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(114)an-naas/rukoo01an-naas.mp3',
       },
     ],
   },

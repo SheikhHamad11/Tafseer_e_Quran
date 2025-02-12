@@ -1,4 +1,4 @@
-import {View, Text, ImageBackground, ScrollView} from 'react-native';
+import { View, Text, ImageBackground, ScrollView, StyleSheet } from 'react-native';
 import React from 'react';
 import CustomHeader from '../components/CustomHeader';
 
@@ -8,18 +8,27 @@ export default function About() {
       <CustomHeader text="About" />
       <ImageBackground
         source={require('../../src/assets/new1.jpg')}
-        style={{flex: 1, paddingHorizontal: 20}}
+        style={{ flex: 1, paddingHorizontal: 20 }}
         resizeMode="cover">
+        {/* Overlay */}
+        <View
+          style={{
+            ...StyleSheet.absoluteFillObject,
+            backgroundColor: 'rgba(180, 142, 87, 0.6)',
+            zIndex: 0,
+          }}
+        />
+
         <ScrollView showsVerticalScrollIndicator={false}>
           <Text
             style={{
-              color: 'black',
+              color: 'black', // White text for contrast
               fontSize: 16,
               textAlign: 'justify',
               zIndex: 1,
               marginVertical: 20,
             }}>
-            Tafhim-ul-Quran is one of the most extensive and popular works on
+            Tafheem-ul-Quran is one of the most extensive and popular works on
             the translation and commentary of the Holy Qur'an. Spread over 6
             volumes, it took Syed Abul Ala Maududi 30 years to complete, from
             1942 to 1972.
@@ -40,7 +49,7 @@ export default function About() {
             The app also contains complete Arabic recitation of the Quran and
             verse-by-verse translation in Urdu, Pashto and Hindi.
             {'\n\n'}
-            <Text style={{fontWeight: 'bold'}}>
+            <Text style={{ fontWeight: 'bold' }}>
               ESP interactive solutions
             </Text>{' '}
             have developed this app and made it free to download and use,

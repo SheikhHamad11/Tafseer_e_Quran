@@ -1,9 +1,10 @@
-import {View, Text, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {useNavigation} from '@react-navigation/native';
+import Icon1 from 'react-native-vector-icons/FontAwesome6';
+import { useNavigation } from '@react-navigation/native';
 import Header from './Modal';
-export default function CustomHeader({text}) {
+export default function CustomHeader({ text }) {
   const [modalVisible, setModalVisible] = useState(false);
   const navigation = useNavigation();
   return (
@@ -19,9 +20,9 @@ export default function CustomHeader({text}) {
           justifyContent: 'space-between',
         }}>
         <TouchableOpacity
-          style={{marginLeft: 5}}
+          style={{ marginLeft: 5, }}
           onPress={() => navigation.goBack()}>
-          <Icon name="arrow-left" size={25} color={'black'} />
+          <Icon1 name="arrow-left" size={25} color={'black'} />
         </TouchableOpacity>
         <Text
           style={{
@@ -31,7 +32,7 @@ export default function CustomHeader({text}) {
           {text}
         </Text>
         <TouchableOpacity
-          style={{marginLeft: 10, paddingHorizontal: 10}}
+          style={{ marginLeft: 10, paddingHorizontal: 10 }}
           onPress={() => setModalVisible(true)}>
           <Icon name="ellipsis-v" size={25} color={'black'} />
         </TouchableOpacity>

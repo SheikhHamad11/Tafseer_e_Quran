@@ -77,22 +77,20 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.tafseer_e_quran"
+    namespace "com.espis.tafseerequran"
     defaultConfig {
-        applicationId "com.tafseer_e_quran"
+        applicationId "com.espis.tafseerequran"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
+        versionCode 11
         versionName "1.0"
     }
     signingConfigs {
          release {
-            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
-                storeFile file(MYAPP_UPLOAD_STORE_FILE)
-                storePassword MYAPP_UPLOAD_STORE_PASSWORD
-                keyAlias MYAPP_UPLOAD_KEY_ALIAS
-                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
-            }
+                storeFile file ("Quran_App.keystore")
+                storePassword "ESPIS12345"
+                keyAlias "alias_name"
+                keyPassword "ESPIS12345"
         }
         debug {
             storeFile file('debug.keystore')
