@@ -1083,10 +1083,10 @@ export const Volume = [
         live_path: '',
         download_path: null,
         download_flag: null,
-        url: ['http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(59)alhashr/alhashr(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(59)alhashr/rukoo01alhashr.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(59)alhashr/rukoo02alhashr.mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(59)alhashr/rukoo03alhashr.mp3',
+        url: ['http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(59)al-hashr/alhashr(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(59)al-hashr/rukoo01alhashr.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(59)al-hashr/rukoo02alhashr.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume05/(59)al-hashr/rukoo03alhashr.mp3',
 
         ]
       },
@@ -1334,7 +1334,7 @@ export const Volume = [
       },
       {
         surah_id: 82,
-        surah_name: 'Abas',
+        surah_name: 'Abasa',
         live_path: '',
         download_path: null,
         download_flag: null,
@@ -1372,8 +1372,9 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(083)al-mutaffifeen/al-mutaffifeen(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(083)al-mutaffifeen/rukoo01al-mutaffifeen.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(083)al-mutaffifeen/al-mutafifeen(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(083)al-mutaffifeen/rukoo01al-mutafifeen.mp3',
+
         ],
       },
       {
@@ -1416,8 +1417,8 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(087)al-aala/al-aala(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(087)al-aala/rukoo01al-aala.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(087)al-aala/alaala(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(087)al-aala/rukoo01alaala.mp3',
         ],
       },
       {
@@ -1559,8 +1560,8 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(100)al-aadiyat/al-aadiyat(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(100)al-aadiyat/rukoo01al-aadiyat.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(100)al-aadiyat/al-adiyat(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(100)al-aadiyat/rukoo01al-adiyat.mp3',
         ],
       },
       {
@@ -1570,8 +1571,8 @@ export const Volume = [
         download_path: null,
         download_flag: null,
         url: [
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(101)al-qaariya/al-qaariya(intro).mp3',
-          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(101)al-qaariya/rukoo01al-qaariya.mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(101)al-qaariya/al-qariya(intro).mp3',
+          'http://download.quranurdu.com/Tafheem-ul-Quran%20by%20Syed%20Moududi/volume06/(101)al-qaariya/rukoo01al-qariya.mp3',
         ],
       },
       {

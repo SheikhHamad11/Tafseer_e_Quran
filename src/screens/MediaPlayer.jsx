@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   AppState, ToastAndroid, Platform, PermissionsAndroid,
   Linking,
+  Modal,
 } from 'react-native';
 import TrackPlayer, {
   AppKilledPlaybackBehavior,
@@ -38,7 +39,7 @@ export default function MediaPlayer({ route }) {
     catId,
     surahId
   } = lastSurahData;
-  const [trackTitle, setTrackTitle] = useState('playing...');
+  const [trackTitle, setTrackTitle] = useState('loading...');
   const cat_id = item?.cat_id ? item.cat_id : catId;
   const surah_id = item?.surah_id ? item.surah_id : surahId;
 
@@ -46,13 +47,14 @@ export default function MediaPlayer({ route }) {
   const selectedItem = Urdu_data.find(item => item.cat_id === cat_id).surah_data.find(item => item.surah_id === surah_id)
   const selectedUrls = selectedItem.url;
   const surahUrls = Array.isArray(selectedUrls) ? selectedUrls : [selectedUrls]; // Get URL based on index
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [position, setPosition] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [queueLength, setQueueLength] = useState(0);
-
+  const [isPlaying, setIsPlaying] = useState(false); //current status pause or play
+  const [position, setPosition] = useState(0);// for current position
+  const [duration, setDuration] = useState(0);//for showing total time
+  const [playbackSpeed, setplaybackSpeed] = useState(1.0)
   const surahForPlay = surahUrls[currentSurahIndex]
+  const [isModalVisible1, setModalVisible1] = useState(false);
 
+  const speedOptions = [2.0, 1.5, 1.25, 1.0, 0.75, 0.50, 0.25];
 
 
   const savePlayBackPosition = async () => {
@@ -186,6 +188,7 @@ export default function MediaPlayer({ route }) {
         artist: 'Tafheem-ul-Quran',
         artwork: require('../assets/new2.jpg'),
       });
+      await TrackPlayer.setRate(1.0);
       await setTrackTitle(`${selectedItem.surah_name} - Rukoo ${currentSurahIndex + 1}`)
       if (Position && !item?.cat_id) {
         console.log(`Seeking to position: ${Position}`);
@@ -199,12 +202,16 @@ export default function MediaPlayer({ route }) {
           Capability.Pause,
           Capability.Stop,
           Capability.SeekTo,
+          // Capability.SkipToNext,
+          // Capability.SkipToPrevious
         ],
         compactCapabilities: [
           Capability.Play,
           Capability.Pause,
           Capability.Stop,
           Capability.SeekTo,
+          // Capability.SkipToNext,
+          // Capability.SkipToPrevious
         ],
         android: {
           appKilledPlaybackBehavior:
@@ -331,33 +338,7 @@ export default function MediaPlayer({ route }) {
   };
 
 
-  // const playNextTrack = async () => {
-  //   try {
-  //     // Ensure we don't go beyond the available tracks
-  //     if (currentSurahIndex < surahUrls.length - 1) {
-  //       const nextIndex = currentSurahIndex + 1;
-  //       setCurrentSurahIndex((pre) => pre + 1);
-  //       const nextSurahUrl = surahUrls[nextIndex];
-  //       console.log({ nextIndex, nextSurahUrl, surahForPlay, currentSurahIndex })
-  //       await TrackPlayer.reset(); // Reset the player to avoid multiple tracks in the queue
-  //       setIsPlaying(true)
-  //       await TrackPlayer.add({
-  //         id: `${selectedItem.surah_id}_${nextIndex}`,
-  //         url: nextSurahUrl,
-  //         title: `${selectedItem.surah_name} - Rukoo ${nextIndex + 1}`,
-  //         artist: 'Tafheem-ul-Quran',
-  //         artwork: require('../assets/new2.jpg'),
-  //       });
-  //       await setTrackTitle(`${selectedItem.surah_name} - Rukoo ${nextIndex + 1}`)
 
-  //       await TrackPlayer.play(); // Start playing the next track
-  //     } else {
-  //       console.log('No more tracks to play.');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error playing next track:', error);
-  //   }
-  // };
 
   const playPreviousTrack = async () => {
     try {
@@ -404,6 +385,11 @@ export default function MediaPlayer({ route }) {
     );
   };
 
+  const changePlaybackSpeed = async (speed) => {
+    setplaybackSpeed(speed);
+    await TrackPlayer.setRate(speed);
+    ToastAndroid.show(`Switched to ${speed}x`, ToastAndroid.SHORT);
+  };
 
 
 
@@ -500,34 +486,46 @@ export default function MediaPlayer({ route }) {
         source={require('../assets/new1.jpg')}
         style={{ flex: 1, padding: 20 }}
         resizeMode="cover">
-        <View style={{ marginVertical: 20 }}>
-          <Slider
-            style={{ width: '100%' }}
-            minimumValue={0}
-            maximumValue={duration || 1}
-            value={position}
-            minimumTrackTintColor="rgba(187, 148, 87, 0.7)"
-            maximumTrackTintColor="gray"
-            thumbTintColor="black"
-            onSlidingComplete={handleSeek}
-          />
+        <View style={{ marginVertical: 20, }}>
+          <View style={{ flexDirection: 'row' }}>
+
+
+            <Slider
+              style={{ width: '100%', }}
+              minimumValue={0}
+              maximumValue={duration || 1}
+              value={position}
+              minimumTrackTintColor="rgba(187, 148, 87, 0.7)"
+              maximumTrackTintColor="gray"
+              thumbTintColor="black"
+              onSlidingComplete={handleSeek}
+            />
+
+          </View>
           {!selectedItem.url ? (
             <Icon name="ban" size={25} color="black" />
           ) : !position && !duration ? (
             <ActivityIndicator
               color={'black'}
-              style={{ marginHorizontal: 30 }}
+              style={{ marginVertical: 10 }}
               size={25}
             />
           ) : (
             <View
               style={{
                 flexDirection: 'row',
-                justifyContent: 'space-between',
+                justifyContent: 'space-between', marginHorizontal: 10
               }}>
-              <Text style={styles.text}>{formatTime(position)}</Text>
+              <Text style={[styles.text]}>{formatTime(position)}</Text>
+              {/* Dropdown Button */}
+              <TouchableOpacity
+                style={styles.dropdownButton}
+                onPress={() => setModalVisible1(true)}
+              >
+                <Text style={styles.buttonText}>{playbackSpeed}x</Text>
+              </TouchableOpacity>
               {/* <Text style={styles.text}>---</Text> */}
-              <Text style={styles.text}>{formatTime(duration)}</Text>
+              <Text style={[styles.text,]}>{formatTime(duration)}</Text>
             </View>
           )}
 
@@ -569,13 +567,40 @@ export default function MediaPlayer({ route }) {
         </View>
 
 
-        {/* 
-        <TouchableOpacity onPress={stopPlayback} style={styles.row}>
-          <View style={{flexDirection: 'row', gap: 10}}>
-            <Icon name="stop" color="black" size={20} />
-            <Text style={styles.text}>Stop </Text>
-          </View>
-        </TouchableOpacity> */}
+        {/* Modal for Dropdown */}
+        <Modal transparent animationType="fade" visible={isModalVisible1}>
+          <TouchableOpacity
+            style={styles.modalOverlay}
+            activeOpacity={1}
+            onPressOut={() => setModalVisible1(false)}
+            onPress={() => setModalVisible(false)}
+          >
+            <View style={styles.modalContainer}>
+              {speedOptions.map((speed) => (
+                <TouchableOpacity
+                  key={speed}
+                  style={[
+                    styles.optionButton,
+                    playbackSpeed === speed && styles.activeOption,
+                  ]}
+                  onPressOut={() => setModalVisible1(false)}
+                  onPress={() => changePlaybackSpeed(speed)}
+                >
+                  <Text
+                    style={[
+                      styles.optionText,
+                      playbackSpeed === speed && styles.activeOptionText,
+                    ]}
+                  >
+                    {speed}x
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </TouchableOpacity>
+        </Modal>
+
+
       </ImageBackground>
     </>
   );
@@ -594,13 +619,77 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'black',
-    fontSize: 18,
+    fontSize: 16,
   },
   controlContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 20,
+  },
+  speedContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginVertical: 10,
+  },
+  speedButton: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+    padding: 10,
+    backgroundColor: 'black',
+    borderRadius: 5,
+    textAlign: 'center',
+  },
+  activeSpeedButton: {
+    color: "rgba(187, 148, 87, 0.8)", // Active color
+    fontWeight: "bold",
+  },
+  container: {
+    alignItems: "center",
+    marginTop: 10,
+  },
+  dropdownButton: {
+    // backgroundColor: "rgba(187, 148, 87, 0.8)",
+    color: "black",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: "rgba(187, 148, 87, 0.8)",
+    fontSize: 16,
+    fontWeight: 'bold'
+
+  },
+  modalOverlay: {
+    flex: 1,
+    justifyContent: "flex-start",
+    paddingTop: 100,
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
+  modalContainer: {
+    backgroundColor: "white",
+    width: 100,
+    borderRadius: 5,
+    paddingVertical: 10,
+  },
+  optionButton: {
+    paddingVertical: 2,
+    paddingHorizontal: 20,
+    alignItems: "center",
+  },
+  optionText: {
+    fontSize: 16,
+    color: "black",
+  },
+  activeOption: {
+    backgroundColor: "rgba(187, 148, 87, 0.8)",
+  },
+  activeOptionText: {
+    color: "white",
+    fontWeight: "bold",
   },
 });
 

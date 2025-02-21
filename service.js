@@ -14,6 +14,7 @@ module.exports = async function () {
 
     TrackPlayer.seekTo(0)
     TrackPlayer.stop();
+
   });
   TrackPlayer.addEventListener('remote-seek', async event => {
     // Seek to the position specified in the event (in seconds)
